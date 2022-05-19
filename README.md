@@ -16,6 +16,9 @@
 # pip install futures
 
 
+# rm -rf sbf
+
+
 # git clone https://github.com/Syafii-XD/sbf
 
 
