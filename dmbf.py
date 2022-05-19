@@ -486,7 +486,7 @@ def userset():
         if usera == lololr:
             print(f"{B} | ")
             print(f"{B} | ")
-            jalan(f"{P}[•] Sukses mengganti");menu()
+            print(f"{P}[•] Sukses mengganti");menu()
         else:print(f"{P}[•]{M} Gagal mengganti user agent ");exit()
     
     elif _pil_ in ["2","02"]:
