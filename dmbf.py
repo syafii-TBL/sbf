@@ -291,7 +291,7 @@ def menu():
     except (KeyError,IOError):
         print(f"{B} | ")
         print(f"{B} | ")
-        print(f"{P}[!]{M} cookie failed.");log_cookie()
+        jalan(f"{P}[!]{M} cookie failed.");log_cookie()
     os.system("clear");banner()
     print(f"{B} | ")
     print(f"{P}[*] Nama akun      : {B}{lolol}") 
