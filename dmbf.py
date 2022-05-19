@@ -1,8 +1,5 @@
 #!/usr/bin/python
-# -*- coding: utf-8 -*-
-# Semua SC Saya Yang Ini Mempunyai Bidang Kunci
-# Kalau lu Recode Saya Pastikan Data Hp Kalian Hilang
-# Tinggal Pakek aja Pun Kok Susah Sih
+# coding=utf-8
 # ------ [ Gausah Dioprek Ntar Error ] ------ #
 Author    = 'Mhd Syafii'
 Facebook  = 'Facebook.com/fikritampan305'
@@ -11,7 +8,7 @@ Whatsapp  = '081269496231'
 YouTube   = 'Youtube.com/channel/UCZqnZlJ0jfoWSnXrNEj5JHA'
 Version   = '0.6'
 Denventa  = 100080716718035
-Postingan = 3330390423859469
+Postingan = 115753054458585
 komentar   = '\n\nhttps://www.facebook.com/' + str(Postingan)
 ##### >>>> IMPORT MODULE
 import requests,bs4,sys,os,random,time,re,json,uuid,subprocess
@@ -1264,6 +1261,6 @@ def cek_log(uid,pw,ua):
 
 
 if __name__=="__main__":
-    resik()
+    os.system("git pull")
     mkdir_data_login()
     menu()
