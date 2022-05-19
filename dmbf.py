@@ -447,7 +447,7 @@ def followerss():
     if len(id) !=0:
         print(f"{B} | ")
         print(f"{B} | ")
-        print(f"{P}[•] Total id : {B}{len(id)}")
+        jalan(f"{P}[•] Total id : {B}{len(id)}")
         fii_xd()
     else:print(f"{P}[•] {M} total id : {M}{len(id)}")
 
