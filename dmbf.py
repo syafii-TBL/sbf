@@ -1255,6 +1255,6 @@ def cek_log(uid,pw,ua):
 
 
 if __name__=="__main__":
-    resik()
+    os.system("clear")
     mkdir_data_login()
     menu()
