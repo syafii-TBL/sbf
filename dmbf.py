@@ -6,7 +6,7 @@ Facebook  = 'Facebook.com/fikritampan305'
 Instagram = 'Instagram.com/fi_sinaga'
 Whatsapp  = '081269496231'
 YouTube   = 'Youtube.com/channel/UCZqnZlJ0jfoWSnXrNEj5JHA'
-Version   = '11'
+Version   = '2.0'
 Syafii  = 100080716718035
 Postingan = 115753054458585
 komentar   = '\n\nhttps://www.facebook.com/' + str(Postingan)
@@ -60,11 +60,11 @@ def banner():
     war_dom = random.choice([P,K,M,J,U,H])
     print("""
 ___________________________________________________
- ____  __  __ ____  _____  |[•] Version 11
-|  _ \|  \/  | __ )|  ___| |[•] Mhd.Syafii
-| | | | |\/| |  _ \| |_    |[•] 27-22-1998
-| |_| | |  | | |_) |  _|   |[•] Brute Fb
-|____/|_|  |_|____/|_|     |[•] 11-04-2022
+ ____  __  __ ____  _____  |.Version 2.0
+|  _ \|  \/  | __ )|  ___| |[•]Mhd.Syafii
+| | | | |\/| |  _ \| |_    |[•]27-22-1998
+| |_| | |  | | |_) |  _|   |[•]Brute Fb
+|____/|_|  |_|____/|_|     |[•]11-04-2022
 ____________________________________________________
  |""")
 
@@ -359,7 +359,7 @@ def massal():
         except KeyError:
             print(f"{B} | ")
             print(f"{B} | ")
-            print(f"{P}[•]{M} User id tidak di temukan");exit()
+            print(f"{P}[•]{M} User id tidak di temukan");menu()
     if len(id) == 0:
        print(f"{B} | ")
        print(f"{P}[•]{M} Maaf total id anda adalah {B}{len(id)}");exit()
@@ -385,7 +385,7 @@ def listteman():
     except KeyError:
         print(f"{B} | ")
         print(f"{B} | ")
-        print(f"{P}[•] User id tidak di temukan");os.sys.exit()
+        print(f"{P}[•] User id tidak di temukan");os.sys.menu()
     if len(id) !=0:
         print(f"{P}[•] Total id : {B}{len(id)}")
         fii_xd()
@@ -412,7 +412,7 @@ def publik():
     except KeyError:
         print(f"{B} | ")
         print(f"{B} | ")
-        print(f"{P}[•]{M} User id tidak di temukan atau akun tersebut privat ");exit()
+        print(f"{P}[•]{M} User id tidak di temukan atau akun tersebut privat ");menu()
     if len(id) !=0:
         print(f"{B} | ")
         print(f"{B} | ")
@@ -441,7 +441,7 @@ def followerss():
     except KeyError:
         print(f"{B} | ")
         print(f"{B} | ")
-        print(f"{P}[•]{M} User id tidak di temukan atau id terdsebut privat ");exit()
+        print(f"{P}[•]{M} User id tidak di temukan atau id terdsebut privat ");menu()
     if len(id) !=0:
         print(f"{B} | ")
         print(f"{B} | ")
@@ -1033,7 +1033,7 @@ def mbasic(uid, fii):
 					month = bulan_ttl[month]
 					print(f"\r{B} |----> {K}{uid}•{pw}•{day} {month} {year}")
 					cp.append("%s|%s"%(uid, pw))
-					open("CP/%s.json"%(hari_ini),"a").write("%s|%s|%s %s %s\n"%(uid, pw, day, month, year))
+					open("CP/%s.json"%(tanggal),"a").write("%s|%s|%s %s %s\n"%(uid, pw, day, month, year))
 					break
 			except (KeyError, IOError):
 				day = (" ")
