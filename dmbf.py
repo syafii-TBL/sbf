@@ -459,9 +459,9 @@ def userset():
     print(f"{B} | ")
     print(f"{P}[1] Ganti user agent")
     print(f"{P}[2] Cek user agent yang di gunakan")
-    print(f"{P}[0] Kembali")
+    jalan(f"{P}[0] Kembali");menu()
     print(f"{B} | ")
-    _pil_=input(f"{P}[•] Input : {B}")
+    _pil_=input(f"{P}[•] Pilih : {B}")
     if _pil_ in ["1","01"]:
         print(f"{B} | ")
         lololr=input(f"{P}[•] Masukan user agent \n{P}[•] Masukan di sini : {B}")
