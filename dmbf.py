@@ -260,7 +260,7 @@ def ___fii___Sayang___Kamu___Widiya___():
     except IOError:
         print(f"{B} | ")
         print(f"{B} | ")
-        jalan(f"{P}[•]{M} Pastikan akun tumbal bagus");exit()
+        print(f"{P}[•]{M} Pastikan akun tumbal bagus");exit()
         os.system('rm -rf login/token.json')
         os.system('rm -rf login/cookie.json')
         menu()
