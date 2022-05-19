@@ -460,7 +460,7 @@ def userset():
     print(f"{B} | ")
     print(f"{P}[1] Ganti user agent")
     print(f"{P}[2] Cek user agent yang di gunakan")
-    jalan(f"{P}[0] Kembali");menu()
+    print(f"{P}[0] Kembali");menu()
     print(f"{B} | ")
     _pil_=input(f"{P}[•] Pilih : {B}")
     if _pil_ in ["1","01"]:
