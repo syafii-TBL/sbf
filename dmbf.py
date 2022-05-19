@@ -312,7 +312,7 @@ def menu():
     print(f"{P}[5] Ganti user-agent")
     print(f"{P}[6] Chek results crack")
     print(f"{P}[7] Chek opsi account chekpoint")
-    print(f"{M}[0] Log Out ")
+    jalan(f"{M}[0] Log Out ")
     print(f"{B} | ")
     pp = input(f"{P}[*] Pilih Yang Mana : {B}")
     if pp in ["1","01"]:
@@ -459,7 +459,7 @@ def userset():
     print(f"{B} | ")
     print(f"{P}[1] Ganti user agent")
     print(f"{P}[2] Cek user agent yang di gunakan")
-    print(f"{P}[0] Kembali");menu()
+    print(f"{P}[0] Kembali")
     print(f"{B} | ")
     _pil_=input(f"{P}[•] Pilih : {B}")
     if _pil_ in ["1","01"]:
