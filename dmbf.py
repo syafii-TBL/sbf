@@ -476,7 +476,7 @@ def followerss():
 ##### PENGGANTI USER - UA
 def userset():
     print(f"{B} | ")
-    print(f"{B} | ")
+    jalan(f"{B} | ")
     print(f"{P}[1] Ganti user agent")
     print(f"{P}[2] Cek user agent yang di gunakan")
     print(f"{P}[0] Kembali")
