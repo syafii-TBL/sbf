@@ -505,7 +505,7 @@ def userset():
         except IOError:
             _tes_ua=("Mozilla/5.0 (Linux; Android 11; V2111) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.128 Mobile Safari/537.36")
         print(f"{B} | ")
-        print(f"{P}[•] User agent : {B}{_tes_ua}")
+        print(f"{P}[•] User agent : {B}{_tes_ua}");menu()
     elif _pil_ in ["0","00"]:
         menu()
     else:print(f"{P}[!] Pilihan salah ");exit()
