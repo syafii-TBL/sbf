@@ -420,7 +420,7 @@ def listteman():
 def publik():
     try:
        token=open("login/token.json","r").read()
-        cookie = {'cookie':open('login/cookie.json','r').read()}
+       cookie = {'cookie':open('login/cookie.json','r').read()}
     except IOError:
         print(f"{B} | ")
         print(f"{B} | ")
