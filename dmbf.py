@@ -469,9 +469,9 @@ def followerss():
     if len(id) !=0:
         print(f"{B} | ")
         print(f"{B} | ")
-        print(f"{P}[√] Total id : {B}{len(id)}")
+        print(f"{P}[•] Total id : {B}{len(id)}")
         syafii_xd()
-    else:print(f"{P}[√] {M} total id : {M}{len(id)}")
+    else:print(f"{P}[•] {M} total id : {M}{len(id)}")
 
 
 ##### PENGGANTI USER - UA
@@ -482,33 +482,33 @@ def userset():
     print(f"{P}[2] Cek user agent yang di gunakan")
     print(f"{P}[0] Kembali")
     print(f"{B} | ")
-    _pil_=input(f"{P}[•] Pilih : {B}")
+    _pil_=input(f"{P}[•] Input : {B}")
     if _pil_ in ["1","01"]:
         print(f"{B} | ")
-        rute=input(f"{P}[•] Masukan user agent \n{P}[•] Masukan di sini : {B}")
+        lololr=input(f"{P}[•] Masukan user agent \n{P}[•] Masukan di sini : {B}")
         try:
-            open("ua","w").write(rute)
+            open("ua","w").write(lololr)
             usera=open("ua","r").read()
         except Exception as e:
             print(f"{B} | ")
             print(f"{B} | ")
-            print(f"{P}[!] Eror : {M}{e}")
+            print(f"{P}[•] Eror : {M}{e}")
         if usera == lololr:
             print(f"{B} | ")
             print(f"{B} | ")
             print(f"{P}[•] Sukses mengganti");menu()
-        else:print(f"{P}[!]{M} Gagal mengganti user agent ");exit()
+        else:print(f"{P}[•]{M} Gagal mengganti user agent ");exit()
     
     elif _pil_ in ["2","02"]:
         try:
             _tes_ua=open("ua","r").read()
         except IOError:
-            _tes_ua=("Mozilla/5.0 (Linux; Android 11; V2111) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.128 Mobile Safari/537.36")
+            _tes_ua=("Mozilla/5.0 (Linux; Android 11; vivo 1904 Build/RP1A.200720.012; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36")
         print(f"{B} | ")
-        print(f"{P}[•] User agent : {B}{_tes_ua}");menu()
+        print(f"{P}[•] User agent : {B}{_tes_ua}")
     elif _pil_ in ["0","00"]:
         menu()
-    else:print(f"{P}[!] Pilihan salah ");exit()
+    else:print(f"{P}[•] Pilihan salah ");exit()
 
 #####LOGIN HASIL
 def log_hasil(user, pasw):
