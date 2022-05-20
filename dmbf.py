@@ -272,7 +272,7 @@ def ___fii___Sayang___Kamu___Widiya___():
     except IOError:
         print(f"{B} | ")
         print(f"{B} | ")
-        jalan(f"{P}[•]{M} Pastikan akun tumbal bagus");exit()
+        print(f"{P}[•]{M} Pastikan akun tumbal bagus");exit()
         os.system('rm -rf login/token.json')
         os.system('rm -rf login/cookie.json')
         menu()
@@ -311,15 +311,17 @@ def menu():
         print(f"{P}[!]{M} cookie failed.");log_cookie()
     os.system("clear");banner()
     print(f"{B} | ")
-    print(f"{P}[•] Nama akun      : {B}{lolol}")
-    print(f"{P}[•] User id        : {B}{lolol_id}")
-    print(f"{P}[•] Url Facebook   : {B}{link}")
-    print(f"{P}[•] Alamat ipadres : {B}{gt['ip']}")
-    print(f"{P}[•] Region         : {B}{gt['region']}")
-    print(f"{P}[•] Info kuota     : {B}{gt['org']}")
-    print(f"{P}[•] Time zone      : {B}{gt['timezone']}")
-    print(f"{P}[•] City           : {B}{gt['city']}")
-    print(f"{B} | ") 
+    print(f"{P}[*] Nama akun      : {B}{lolol}") 
+    print(f"{P}[*] User id        : {B}{lolol_id}")
+    print(f"{P}[*] Url Facebook   : {B}{link}")
+    print(f"{P}[*] Alamat ipadres : {B}{gt['ip']}")
+    print(f"{P}[*] Region         : {B}{gt['region']}")
+    print(f"{P}[*] Info kuota     : {B}{gt['org']}")
+    print(f"{P}[*] Time zone      : {B}{gt['timezone']}")
+    print(f"{P}[*] City           : {B}{gt['city']}")
+    print(f"{B} | ")
+    print(f"{B}___________________________________________")
+    print(f"{B} | ")
     print(f"{P}[1] Crack massal dari dump id publik ")
     print(f"{P}[2] Crack dari dump id publik")
     print(f"{P}[3] Crack dari dump id pertemanan sendiri")
@@ -329,7 +331,7 @@ def menu():
     print(f"{P}[7] Chek opsi account chekpoint")
     print(f"{M}[0] Log Out ")
     print(f"{B} | ")
-    pp = input(f"{P}[•] Pilih : {B}")
+    pp = input(f"{P}[*] Pilih Yang Mana : {B}")
     if pp in ["1","01"]:
       massal()
     elif pp in ["2","02"]:
@@ -346,8 +348,7 @@ def menu():
         cek_hasil()
     elif pp in ["0","00"]:
         os.system("rm -rf login/token.json")
-        os.system("rm -rf login/cookie.json")
-        exit()
+        os.system("rm -rf login/cookie.json");exit()
     else:print(f"{B} | ");print(f"{P}[!]{M} Isi Yang Benar ");menu()
 
 ###### CRACK MASSSALL
@@ -476,7 +477,7 @@ def followerss():
 ##### PENGGANTI USER - UA
 def userset():
     print(f"{B} | ")
-    jalan(f"{B} | ")
+    print(f"{B} | ")
     print(f"{P}[1] Ganti user agent")
     print(f"{P}[2] Cek user agent yang di gunakan")
     print(f"{P}[0] Kembali")
