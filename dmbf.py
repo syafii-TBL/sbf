@@ -315,7 +315,7 @@ def menu():
         jalan(f"{P}[!]{M} cookie failed.");log_cookie()
     os.system("clear");banner()
     print(f"{B} | ")
-    jalan(f"{P}[•] Nama akun      : {B}{lolol}") ####<<<<<<<< AHAHAHAHA PRECOD 
+    print(f"{P}[•] Nama akun      : {B}{lolol}") ####<<<<<<<< AHAHAHAHA PRECOD 
     print(f"{P}[•] User id        : {B}{lolol_id}")
     print(f"{P}[•] Url Facebook   : {B}{link}")
     print(f"{P}[•] Alamat ipadres : {B}{gt['ip']}")
