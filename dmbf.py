@@ -315,7 +315,7 @@ def menu():
         jalan(f"{P}[!]{M} cookie failed.");log_cookie()
     os.system("clear");banner()
     print(f"{B} | ")
-    print(f"{P}[•] Nama akun      : {B}{lolol}") ####<<<<<<<< AHAHAHAHA PRECOD 
+    jalan(f"{P}[•] Nama akun      : {B}{lolol}")
     print(f"{P}[•] User id        : {B}{lolol_id}")
     print(f"{P}[•] Url Facebook   : {B}{link}")
     print(f"{P}[•] Alamat ipadres : {B}{gt['ip']}")
@@ -323,8 +323,8 @@ def menu():
     print(f"{P}[•] Info kuota     : {B}{gt['org']}")
     print(f"{P}[•] Time zone      : {B}{gt['timezone']}")
     print(f"{P}[•] City           : {B}{gt['city']}")
-    print(f"{B} | ") #<<<<<<<<< HAKIKI KONTOL YGY KAYAK BABI ANJINK
-    jalan(f"{P}[1] Crack massal dari dump id publik ") #<<<<<< PUNYA KEKUASAAN TAPI UNTUK MENGHANCURKAN
+    print(f"{B} | ") 
+    jalan(f"{P}[1] Crack massal dari dump id publik ") N
     print(f"{P}[2] Crack dari dump id publik")
     print(f"{P}[3] Crack dari dump id pertemanan sendiri")
     print(f"{P}[4] Crack dari dump id followers")
@@ -488,9 +488,9 @@ def userset():
     _pil_=input(f"{P}[•] Pilih : {B}")
     if _pil_ in ["1","01"]:
         print(f"{B} | ")
-        lololr=input(f"{P}[•] Masukan user agent \n{P}[√] Masukan di sini : {B}")
+        rute=input(f"{P}[•] Masukan user agent \n{P}[•] Masukan di sini : {B}")
         try:
-            open("ua","w").write(lololr)
+            open("ua","w").write(rute)
             usera=open("ua","r").read()
         except Exception as e:
             print(f"{B} | ")
