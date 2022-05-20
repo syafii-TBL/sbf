@@ -308,7 +308,7 @@ def menu():
     except (KeyError,IOError):
         print(f"{B} | ")
         print(f"{B} | ")
-        jalan(f"{P}[!]{M} cookie failed.");log_cookie()
+        print(f"{P}[!]{M} cookie failed.");log_cookie()
     os.system("clear");banner()
     print(f"{B} | ")
     print(f"{P}[•] Nama akun      : {B}{lolol}")
@@ -327,7 +327,7 @@ def menu():
     print(f"{P}[5] Ganti user-agent")
     print(f"{P}[6] Chek results crack")
     print(f"{P}[7] Chek opsi account chekpoint")
-    jalan(f"{M}[0] Log Out ")
+    print(f"{M}[0] Log Out ")
     print(f"{B} | ")
     pp = input(f"{P}[•] Pilih : {B}")
     if pp in ["1","01"]:
